@@ -1,4 +1,8 @@
-# İçerik
+![NLPhoenix Logo](https://github.com/STNM-NLPhoenix/Teknofest2024TDDI/blob/main/NLPhoenix.png)
+
+<div align="left">
+    <h1>İçerik</h1>
+</div>
 
 1. **Proje ve Ekip Tanıtımı**
    - Ekip Tanıtımı
@@ -103,3 +107,14 @@
 
    - **Elde Edilen Sonuçların Doğruluğu ve Hassasiyeti**
      - Eğitim süreci sonrasında, T5 modelinin performansı kapsamlı bir şekilde değerlendirilmiştir. Doğruluk (accuracy), hassasiyet (precision), geri çağırma (recall) ve F1 skoru gibi performans metrikleri kullanılarak modelin başarımı ölçülmüştür. Sonuçlar, modelin firma isimlerini yüksek doğrulukla tanıyabildiğini ve düşük hata oranlarıyla etkili bir şekilde sınıflandırma yapabildiğini göstermiştir. Özellikle, modelin Türkçe dilinin yapısal özelliklerini ve nüanslarını anlamadaki başarısı, projenin hedeflerine ulaşmasında kritik bir rol oynamıştır.
+
+
+5. **Duygu Analizi**
+   - **Duygu Analizi Yöntemleri ve Kullanılan Model**
+     - Projemizin duygu analizi kısmında, metinlerdeki ince duygusal nüansları yakalamak ve firma isimlerine atfedilen duyguları yüksek doğrulukla belirlemek için en gelişmiş Aspect-Based Sentiment Analysis (ABSA) yöntemleri kullanılmıştır. Bu görevde, Transformer tabanlı modellerin gücünden yararlanılmış ve kapsamlı bir ön eğitim sürecinden geçirilmiş özel bir T5 modeli kullanılmıştır. T5, çok katmanlı dikkat mekanizmaları sayesinde, cümlelerin bağlamını derinlemesine anlayarak, metin içindeki belirli varlıkların etrafındaki duygusal ifadeleri ayırt etme yeteneğine sahiptir.
+
+   - **Metin İçerisinde Firma İsimlerine Atfedilen Duyguların Tespiti**
+     - Duygu analizi süreci, geniş bir veri yelpazesi üzerinden gerçekleştirilmiş ve her bir metin parçasında belirtilen firma isimlerine yönelik duyguların tespit edilmesi hedeflenmiştir. Bu süreçte, olumlu, olumsuz ve nötr duygular dikkatlice sınıflandırılmıştır. Proje ekibi olarak, eğitim veri setini özenle etiketledik ve modelin, Türkçe dilinde özgün ve karmaşık duygu ifadelerini başarılı bir şekilde algılamasını sağladık. Örneğin, "X firması, müşteri hizmetlerinde olağanüstü bir deneyim sundu." cümlesinde, 'olağanüstü' kelimesi sıfat olarak tanımlanması aracılığıyla model, pozitif bir duygu olduğuna dair bir önsezi sunulmuştur. Bu gibi ayrıntılı analizler, Türkçe metinlerdeki duygusal tonların incelikle anlaşılmasını mümkün kılmıştır.
+
+   - **Duygu Dağılımının ve Sonuçların Görselleştirilmesi**
+     - Elde edilen sonuçlar, verimli bir şekilde analiz edilip, detaylı bir görselleştirme sürecine tabi tutulmuştur. Bu aşamada, firma bazında pozitif, negatif ve nötr duyguların dağılımı grafikler ve interaktif tablolar aracılığıyla görselleştirilmiştir. Görselleştirme araçları, kullanıcıların metin içeriğine ilişkin genel duygusal eğilimleri hızlı ve kolay bir şekilde anlamalarına yardımcı olmuştur. Bu sayede, firmaların kamuoyundaki algısını izlemek ve stratejik kararlar almak için değerli içgörüler sunulmuştur.
