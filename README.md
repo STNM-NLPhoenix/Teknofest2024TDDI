@@ -30,8 +30,6 @@
    - Duygu Dağılımının ve Sonuçların Görselleştirilmesi
 
 7. **Veri Ön İşleme Aşamaları**
-   - Metin Temizleme ve Normalizasyon
-   - Stop Word'lerin Çıkarılması ve Lemmatizasyon
 
 8. **Model Geliştirme**
    - Kullanılan NER ve ABSA Modellerinin Detayları
@@ -118,3 +116,52 @@
 
    - **Duygu Dağılımının ve Sonuçların Görselleştirilmesi**
      - Elde edilen sonuçlar, verimli bir şekilde analiz edilip, detaylı bir görselleştirme sürecine tabi tutulmuştur. Bu aşamada, firma bazında pozitif, negatif ve nötr duyguların dağılımı grafikler ve interaktif tablolar aracılığıyla görselleştirilmiştir. Görselleştirme araçları, kullanıcıların metin içeriğine ilişkin genel duygusal eğilimleri hızlı ve kolay bir şekilde anlamalarına yardımcı olmuştur. Bu sayede, firmaların kamuoyundaki algısını izlemek ve stratejik kararlar almak için değerli içgörüler sunulmuştur.
+
+6. **Veri Ön İşleme Aşamaları**
+   - **Tokenizasyon**
+     - Bu projede, Türkçe diline özgü yapıları dikkate alarak, metinler tokenizasyon işlemine tabi tutulmuştur. Bu işlem, cümleleri kelime veya alt-kelime düzeyinde parçalara ayırarak her bir bileşeni ayrı bir token olarak işlemeye olanak tanır. Böylece, modellerin dilin anlam ve bağlamını daha iyi kavraması sağlanır. Tokenizasyon sürecinde, dilin morfolojik zenginliği ve eklerin ayrımı özenle gerçekleştirilmiştir.
+
+   - **Özel Karakterlerin ve Noktalama İşaretlerinin Kaldırılması**
+     - Metin analizinde gereksiz gürültüyü azaltmak için özel karakterleri ve noktalama işaretlerini temizlendi. Bu süreçte, Türkçe diline özgü karakterlerin korunmasına özen gösterilirken, metinlerin anlamını bozmayan ancak analiz açısından gereksiz olan tüm özel karakterler ve noktalama işaretleri çıkarılmıştır. Örneğin, noktalama işaretleri (nokta hariç) ve özel semboller (&, #, %, vb.) temizlenmiş, bu sayede veri seti daha saf ve odaklanmış bir hale getirilmiştir.
+
+   - **Veri Temizliği**
+     - Veri temizliği, ham verilerin analiz için uygun hale getirilmesi amacıyla gerçekleştirildi. Bu adımda, metinlerde bulunan gereksiz boşluklar, HTML etiketleri, URL'ler ve diğer alakasız bilgiler titizlikle temizlenmiştir. Gereksiz boşlukların kaldırılması, metinlerin düzenlenmesini ve tokenizasyon sürecinin doğruluğunu artırır. HTML etiketleri ve URL'ler gibi unsurların temizlenmesi, metinlerin anlam kaymasına yol açabilecek yanıltıcı bilgilerin ayıklanmasını sağlar. Ayrıca, spam içeriği veya anlamsız veri parçaları gibi potansiyel gürültü kaynakları da ortadan kaldırılmıştır. Bu dikkatli temizlik işlemi, modellerin doğru ve tutarlı sonuçlar üretmesine katkıda bulunmuştur.
+
+Bu ön işleme adımları, hem NER hem de ABSA modellerinin doğruluk ve verimliliğini maksimize etmeye yönelik titiz bir hazırlık sürecini ifade eder. Bu kısımda bahsedilmeyen diğer ön işleme adımları ise uygulandıktan sonra model doğruluk değerlerinde düşüş yaşanması sebebiyle kullanılmamış daha çok verimliliğe odaklanılmıştır.
+
+9. **Model Geliştirme**
+   - **Kullanılan NER ve ABSA Modellerinin Detayları**
+     - **NER (Varlık Adı Tanıma) Modeli:**
+       - Bu projede, firma isimlerinin doğru ve hassas bir şekilde tanınabilmesi için savasy/bert-base-turkish-ner-cased modeli kullanılmıştır. Bu model, Türkçe dilinin yapısal özelliklerini dikkate alarak eğitilmiş olup, isim tanıma görevlerinde üstün performans sergilemektedir. Modelin güçlü dil anlayışı ve bağlam duyarlılığı, metinlerdeki firma isimlerini yüksek doğrulukla tanımasına olanak tanır.
+     - **ABSA (Aspect-Based Sentiment Analysis) Modeli:**
+       - Metinlerde firma isimlerine atfedilen duyguların belirlenmesi için dbmdz/bert-base-turkish-cased modeli tercih edilmiştir. Bu model, Türkçe metinlerde duygusal tonları ve bağlamı anlamada yüksek başarı gösterir. Modelin esnek yapısı ve derin öğrenme yetenekleri, firma isimleri etrafındaki duygusal ifadeleri etkili bir şekilde sınıflandırmasını sağlar.
+
+   - **Model Eğitim Süreci ve Hiperparametre Ayarları**
+     - **NER Modeli Eğitimi:**
+       - savasy/bert-base-turkish-ner-cased modeli, yaklaşık 130,000 firma isimleri ile ilgili veri seti kullanılarak ince ayar yapılmıştır (finetuning). Eğitim süreci boyunca, modelin öğrenme oranı, batch boyutu, epoch sayısı gibi hiperparametreler özenle ayarlanmıştır. Özellikle, 3e-5 öğrenme oranı, 32 batch boyutu ve 5 epoch, modelin optimum performansı yakalamasında etkili olmuştur. Model, geniş ve çeşitli veri seti sayesinde, farklı sektörlerden gelen firma isimlerini doğru bir şekilde tanımak üzere eğitilmiştir.
+     - **ABSA Modeli Eğitimi:**
+       - dbmdz/bert-base-turkish-cased modeli, yaklaşık 120,000 veri ile eğitilmiştir. Bu süreçte, modelin duygusal bağlamları anlaması için çeşitli duygusal ifadeler içeren geniş bir veri seti kullanılmıştır. Eğitim sırasında, öğrenme oranı 2e-5, batch boyutu 16 ve 4 epoch kullanılmıştır. Hiperparametrelerin bu şekilde ayarlanması, modelin hem eğitim sürecinde hem de genel performansında yüksek verimlilik sağlamıştır.
+
+   - **Modelin Performansının Değerlendirilmesi**
+     - Eğitim süreçlerinin ardından, modellerin performansı kapsamlı bir şekilde değerlendirilmiştir. Performans değerlendirmesi, doğruluk (accuracy), hassasiyet (precision), geri çağırma (recall) ve F1 skoru gibi temel metrikler üzerinden gerçekleştirilmiştir.
+     - **NER Modeli Performansı:**
+       - savasy/bert-base-turkish-ner-cased modeli, test verileri üzerinde %95'in üzerinde doğruluk ve %93 hassasiyet ile üstün bir performans sergilemiştir. Geri çağırma oranı %92 ve F1 skoru %92.5 olan model, firma isimlerini tanımada yüksek doğruluk sağlamıştır.
+     - **ABSA Modeli Performansı:**
+       - dbmdz/bert-base-turkish-cased modeli, duygu analizi görevlerinde %90 doğruluk, %88 hassasiyet ve %87 geri çağırma oranı ile başarılı sonuçlar elde etmiştir. F1 skoru %87.5 olan model, metinlerdeki firma isimlerine atfedilen duyguları doğru bir şekilde sınıflandırabilmiştir.
+
+
+10. **Sonuç ve Gelecek Çalışmalar**
+   - **Ek Veri Kaynaklarının Kullanımı**
+     - Projenin başarısını artırmak amacıyla, ek veri kaynakları üzerinde çalışmalar gerçekleştirilmiştir. İlk aşamada, semantik veri üretimi denemeleri yapılmış, ancak elde edilen sonuçlar beklenen düzeyde başarılı olmamıştır. Bu yöntem, özellikle metinlerin bağlamsal anlamını doğru bir şekilde modelleyemediği için firmalara yönelik duygu ifadelerinde istenilen doğruluğu sağlayamamıştır.
+
+     - Bir diğer strateji olarak, yabancı dillerdeki veri setlerinin Türkçeye çevrilmesi yöntemi uygulanmıştır. Ancak, bu yaklaşım ABSA modeli üzerinde istenmeyen sonuçlar doğurmuş, özellikle metinlerdeki herhangi bir ifadeyi bir firmaya yönlendirme konusunda olumsuz etkiler gözlemlenmiştir. Dil çevirisi sırasında, bağlam kaybı ve anlam kaymaları gibi problemler ortaya çıkmış, bu da modelin performansını olumsuz yönde etkilemiştir.
+
+     - Bununla birlikte, veri setini genişletmek için kelimelerin eş anlamlılarını kullanarak veri artırımı (data augmentation) yöntemi büyük başarı sağlamıştır. Synonym Replacement (Eş Anlamlı Kelime Değiştirme) adı verilen bu teknik, mevcut veri setindeki cümlelerin farklı varyasyonlarını oluşturarak, modelin daha geniş bir veri kümesinde eğitilmesine olanak tanımıştır. Bu yöntem, hem NER hem de ABSA modellerinin daha sağlam ve genelleştirilebilir olmasını sağlamış, model performansını önemli ölçüde artırmıştır.
+
+   - **Model Geliştirmeleri ve Denemeler**
+     - Proje kapsamında, çeşitli modern dil modelleri değerlendirilmiş ve geliştirilmiştir. DistilBERT, RoBERTa, BERTürk ve T5 gibi popüler Transformer tabanlı modeller üzerinde deneyler yapılmıştır. Her bir modelin performansı, eğitim veri seti üzerinde fine-tuning süreciyle optimize edilmiştir. Elde edilen sonuçlar, her modelin Türkçe metinler üzerindeki etkinliğini ortaya koymuş ve performans metrikleri açısından karşılaştırılmıştır. Sonuçlar, repoda ayrıntılı bir şekilde paylaşılmıştır ve bu modellerin yeteneklerini detaylı olarak analiz eden değerlendirme raporları içermektedir.
+
+   - **İyileştirme Sonuçlarının Karşılaştırılması**
+     - Yapılan iyileştirmeler ve denemeler sonucunda, çeşitli modellerin performansları karşılaştırmalı olarak analiz edilmiştir. Bu karşılaştırmalar, modellerin doğruluk, F1 skoru, hassasiyet ve geri çağırma gibi metrikler üzerinden yapılmıştır. Özellikle, synonym replacement(Eş Anlamlı Kelime Değiştirme) yönteminin uygulanması sonrası modellerde gözlemlenen performans artışı, karşılaştırma da detaylı olarak ele alınmıştır.
+
+Bu çalışmalar sonucunda, proje kapsamında Türkçe metinlerde firma isimlerini tanıma ve bu isimlere yönelik duygusal ifadeleri belirleme konusunda güçlü bir altyapı oluşturulmuştur. Gelecek çalışmalarda, daha büyük ve çeşitlendirilmiş veri setleri ile model eğitiminin devam ettirilmesi, model performansını daha da artırabilir.
