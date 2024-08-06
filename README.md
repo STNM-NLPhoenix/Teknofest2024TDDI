@@ -75,9 +75,9 @@
         * Büşra Erdem
 
    - **Projenin Kapsamı ve Hedefleri**
-      - Bu proje, Teknofest Türkçe Doğal Dil İşleme yarışması için geliştirilmiştir ve Türkçe dilinde metin analizi yapmak amacıyla tasarlanmıştır. Proje, Türkçe dilinin yapısal ve anlamsal özelliklerine uygun olarak firma isimlerini tespit etmek ve bu firmalara atfedilen duygu tonlarını belirlemek için NER ve ABSA modellerini kullanmaktadır.
+      - Bu proje, Teknofest Türkçe Doğal Dil İşleme yarışması için geliştirilmiştir ve Türkçe dilinde metin analizi yapmak amacıyla tasarlanmıştır. Proje, Türkçe dilinin yapısal ve anlamsal özelliklerine uygun olarak firma isimlerini tespit etmek ve bu firmalara atfedilen duygu tonlarını belirlemek için tasarlanmıştır.
      
-     - **Kapsam:** Projenin kapsamı, Türkçe dilinde yazılmış çeşitli metin türlerinden oluşan geniş bir veri setinin analizini içerir. Bu metinler arasında sosyal medya paylaşımları, haber makaleleri, müşteri yorumları ve blog yazıları gibi kaynaklar bulunmaktadır. Proje, Türkçe dilinde doğal dil işleme uygulamaları için önemli bir katkı sağlama ve Türkçe metinlerde firma adlarının ve duygu ifadelerinin doğru bir şekilde tanımlanmasını amaçlar.
+     - **Kapsam:** Projenin kapsamı, Türkçe dilinde yazılmış çeşitli metin türlerinden oluşan geniş bir veri setinin analizini içerir. Bu metinler arasında sosyal medya paylaşımları, haber makaleleri, müşteri yorumları, blog yazıları ve proje ekibimizin ürettiği kaynaklar bulunmaktadır. Proje, Türkçe dilinde doğal dil işleme uygulamaları için önemli bir katkı sağlama ve Türkçe metinlerde firma adlarının ve duygu ifadelerinin doğru bir şekilde tanımlanmasını amaçlar.
 
      - **Hedefler:**
        - **Varlık Tanıma:** Türkçe metinlerde geçen firma isimlerini yüksek doğrulukla tespit etmek ve kategorize etmek.
@@ -87,7 +87,7 @@
        - **Gelecekteki Uygulamalar:** Elde edilen bulguların, Türkçe dilinde hizmet veren firmaların pazar algısını, müşteri geri bildirimlerini ve sosyal medya stratejilerini analiz etmelerinde kullanılabilmesi.
 
    - **Kullanılan Teknikler ve Yöntemler**
-      - Bu projede, doğal dil işleme alanındaki ileri teknikler ve yöntemler kullanılarak, Türkçe dilinde yazılmış metinlerin analizi gerçekleştirilmiştir. Proje, derin öğrenme ve makine öğrenimi tekniklerinin yanı sıra, dilin yapısal özelliklerini dikkate alan özel NLP yöntemlerini de içermektedir.
+      - Bu projede, doğal dil işleme alanındaki ileri düzey teknikler ve yöntemler kullanılarak, Türkçe dilinde yazılmış metinlerin analizi gerçekleştirilmiştir. Proje, derin öğrenme ve makine öğrenimi tekniklerinin yanı sıra, dilin yapısal özelliklerini dikkate alan özel NLP yöntemlerini de içermektedir.
 
       - **Varlık Adı Tanıma (NER) Modeli:** Projede, metinlerde geçen firma isimlerini tanımlamak için gelişmiş Varlık Adı Tanıma (NER) modelleri kullanılmıştır. Bu modeller, BERT gibi önceden eğitilmiş dil modelleri temel alınarak özelleştirilmiş ve Türkçe diline uyarlanmıştır. NER modeli, metin içerisindeki belirli varlıkların (örneğin, şirket isimleri) doğru ve etkili bir şekilde tespit edilmesini sağlar.
 
@@ -104,21 +104,30 @@
 
 4. **Firma İsimlerinin Tespiti**
    - **Varlık Adı Tanıma (NER) Modeli ile Firma İsimlerinin Belirlenmesi**
-     - Bu projede, Türkçe metinlerde geçen firma isimlerinin doğru ve etkin bir şekilde tespit edilmesi amacıyla, modern Varlık Adı Tanıma (NER) modelleri kullanılmıştır. Deneysel çalışmalarda RoBERTa, DistilBERT, T5 ve BERTürk gibi ileri düzey dil modelleri değerlendirilmiştir. Farklı modellerin performansları karşılaştırılmış olup, BERTürk modelinin en üstün sonuçları verdiği tespit edilmiştir. BERTürk’ün güçlü dil anlayışı ve esnek yapısı, Türkçe metinlerde firma isimlerinin tanımlanmasında üstün performans sergilemiştir.
+     - Bu projede, Türkçe metinlerde geçen firma isimlerinin doğru ve etkin bir şekilde tespit edilmesi amacıyla, modern Varlık Adı Tanıma (NER) modelleri kullanılmıştır. Deneysel çalışmalarda RoBERTa, DistilBERT, BERTürk gibi ileri düzey dil modelleri değerlendirilmiştir. Farklı modellerin performansları karşılaştırılmış olup, BERTürk modelinin en üstün sonuçları verdiği tespit edilmiştir. BERTürk’ün güçlü dil anlayışı ve esnek yapısı, Türkçe metinlerde firma isimlerinin tanımlanmasında üstün performans sergilemiştir.
+     - 
+![Modellerin Karşılaştırılması](https://github.com/STNM-NLPhoenix/Teknofest2024TDDI/blob/main/Screenshot%202024-08-05%20074330.png)
 
    - **Modelin Eğitimi ve Değerlendirilmesi**
      - Projemizde, önceden eğitilmiş BERTürk modeli kullanılarak, geniş ve çeşitli bir veri kümesi üzerinde ince ayar (fine-tuning) yapılmıştır. İnce ayar süreci, yaklaşık 120 bin etiketlenmiş veri örneği ile gerçekleştirilmiştir. Bu veri seti, farklı sektörlerden ve kaynaklardan toplanmış metinleri içermekte olup, modelin geniş bir yelpazede firma isimlerini tanıyabilmesine olanak sağlamıştır. Bu süreçte veri ön işleme adımları dikkatle uygulanmış; veri temizliği ve normalizasyon işlemleri titizlikle gerçekleştirilmiştir. Modelin doğruluğunu ve genelleme yeteneğini artırmak amacıyla, hiperparametre optimizasyonu yapılmıştır.
 
+        ![Dataset Kapağı](https://github.com/STNM-NLPhoenix/Teknofest2024TDDI/blob/main/datasetkapaak.png)
+
    - **Elde Edilen Sonuçların Doğruluğu ve Hassasiyeti**
      - Eğitim süreci sonrasında, BERTürk modelinin performansı kapsamlı bir şekilde değerlendirilmiştir. Doğruluk (accuracy), hassasiyet (precision), geri çağırma (recall) ve F1 skoru gibi performans metrikleri kullanılarak modelin başarımı ölçülmüştür. Sonuçlar, modelin firma isimlerini yüksek doğrulukla tanıyabildiğini ve düşük hata oranları ile etkin bir şekilde sınıflandırma yapabildiğini göstermektedir. Özellikle, modelin Türkçe dilinin yapısal özelliklerini ve nüanslarını anlamadaki başarısı, projenin hedeflerine ulaşmasında kritik bir rol oynamıştır.
 
+![Modellerin Karşılaştırılması](https://github.com/STNM-NLPhoenix/Teknofest2024TDDI/blob/main/Screenshot%202024-08-05%20073437.png)
 
 5. **Duygu Analizi**
    - **Duygu Analizi Yöntemleri ve Kullanılan Model**
      - Projemizin duygu analizi kısmında, metinlerdeki ince duygusal nüansları yakalamak ve firma isimlerine atfedilen duyguları yüksek doğrulukla belirlemek amacıyla, gelişmiş Aspect-Based Sentiment Analysis (ABSA) yöntemleri kullanılmıştır. Bu görevde, Transformer tabanlı modellerin gücünden yararlanılmış ve kapsamlı bir ön eğitim sürecinden geçirilmiş özel bir BERTürk modeli kullanılmıştır. BERTürk, çok katmanlı dikkat mekanizmaları sayesinde, cümlelerin bağlamını derinlemesine anlayarak, metin içindeki belirli varlıkların etrafındaki duygusal ifadeleri ayırt etme yeteneğine sahiptir.
 
+![Modellerin Karşılaştırılması](https://github.com/STNM-NLPhoenix/Teknofest2024TDDI/blob/main/Screenshot%202024-08-05%20074330.png)
+
    - **Metin İçerisinde Firma İsimlerine Atfedilen Duyguların Tespiti**
      - Duygu analizi süreci, geniş bir veri yelpazesi üzerinden gerçekleştirilmiş olup, her bir metin parçasında belirtilen firma isimlerine yönelik duyguların tespit edilmesi hedeflenmiştir. Bu süreçte olumlu, olumsuz ve nötr duygular dikkatlice sınıflandırılmıştır. Proje ekibi olarak, eğitim veri setini özenle etiketledik ve modelin, Türkçe dilinde özgün ve karmaşık duygu ifadelerini başarılı bir şekilde algılamasını sağladık. Örneğin, "X firması, müşteri hizmetlerinde olağanüstü bir deneyim sundu." cümlesinde, ‘olağanüstü’ kelimesinin sıfat olarak tanımlanması aracılığıyla model, pozitif bir duygu olduğunu doğru bir şekilde belirlemiştir. Bu gibi ayrıntılı analizler, Türkçe metinlerdeki duygusal tonların incelikle anlaşılmasını mümkün kılmıştır.
+
+        ![Dataset Kapağı](https://github.com/STNM-NLPhoenix/Teknofest2024TDDI/blob/main/datasetkapaak.png)
 
    - **Duygu Dağılımının ve Sonuçların Görselleştirilmesi**
      - Elde edilen sonuçlar, verimli bir şekilde analiz edilmiş ve detaylı bir görselleştirme sürecine tabi tutulmuştur. Bu aşamada, firma bazında pozitif, negatif ve nötr duyguların dağılımı, grafikler ve interaktif tablolar aracılığıyla görselleştirilmiştir. Görselleştirme araçları, kullanıcıların metin içeriğine ilişkin genel duygusal eğilimleri hızlı ve kolay bir şekilde anlamalarına yardımcı olmuştur.
