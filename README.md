@@ -279,35 +279,27 @@ Model eğitim süreci ve kullanılan hiperparametre ayarları detaylandırılmı
 Modelin performansı, çeşitli metrikler kullanılarak değerlendirilmiş ve sonuçlar sunulmuştur. Modelin doğruluğu, hassasiyeti ve güvenilirliği analiz edilmiştir.
 
 ## 8. Sonuçlar ve Analiz 📈
-```
-NER Modeli Performans Metrikleri
 
-Metric	Value
+### NER Modeli Performans Metrikleri
 
-Doğruluk	%95.0
+| Metric       | Value  |
+|--------------|--------|
+| Doğruluk     | %95.0  |
+| Hassasiyet   | %93.0  |
+| Geri Çağırma | %92.0  |
+| F1 Skoru     | %92.5  |
 
-Hassasiyet	%93.0
+### ABSA Modeli Performans Metrikleri
 
-Geri Çağırma	%92.0
+| Metric       | Value  |
+|--------------|--------|
+| Doğruluk     | %90.0  |
+| Hassasiyet   | %88.0  |
+| Geri Çağırma | %87.0  |
+| F1 Skoru     | %87.5  |
 
-F1 Skoru	%92.5
 
 
-ABSA Modeli Performans Metrikleri
-
-Metric	Value
-
-Doğruluk	%90.0
-
-Hassasiyet	%88.0
-
-Geri Çağırma	%87.0
-
-F1 Skoru	%87.5
-
-En Başarılı Modellerin Confusion Matrix ve ROC Eğrisi
-```
-________________________________________
 
 ### Kullanılan NER ve ABSA Modellerinin Detayları
 
@@ -338,25 +330,25 @@ Eğitim süreçlerinin ardından, modellerin performansı kapsamlı bir şekilde
 ### NER Modeli Performansı
 
 savasy/bert-base-turkish-ner-cased modeli, test verileri üzerinde %95'in üzerinde doğruluk ve %93 hassasiyet ile üstün bir performans sergilemiştir. Geri çağırma oranı %92 ve F1 skoru %92.5 olan model, firma isimlerini tanımada yüksek doğruluk sağlamıştır.
-```
-Metric	Value
 
-Doğruluk	%95.0
-Hassasiyet	%93.0
-Geri Çağırma	%92.0
-F1 Skoru	%92.5
-```
+| Metric       | Value |
+|--------------|-------|
+| Doğruluk     | %95.0 |
+| Hassasiyet   | %93.0 |
+| Geri Çağırma | %92.0 |
+| F1 Skoru     | %92.5 |
+
 ### ABSA Modeli Performansı
 
 dbmdz/bert-base-turkish-cased modeli, duygu analizi görevlerinde %90 doğruluk, %88 hassasiyet ve %87 geri çağırma oranı ile başarılı sonuçlar elde etmiştir. F1 skoru %87.5 olan model, metinlerdeki firma isimlerine atfedilen duyguları doğru bir şekilde sınıflandırabilmiştir.
-```
-Metric	Value
 
-Doğruluk	%90.0
-Hassasiyet	%88.0
-Geri Çağırma	%87.0
-F1 Skoru	%87.5
-```
+| Metric       | Value |
+|--------------|-------|
+| Doğruluk     | %90.0 |
+| Hassasiyet   | %88.0 |
+| Geri Çağırma | %87.0 |
+| F1 Skoru     | %87.5 |
+
 ### Analiz ve Sonuçlar
 
 Projemizin analiz ve sonuçları, kullanılan NER ve ABSA modellerinin üstün performansını ve metin analizindeki etkinliğini göstermektedir. Bu modeller sayesinde, Türkçe metinlerde firma isimlerinin doğru bir şekilde tanınması ve bu isimlere atfedilen duyguların yüksek doğrulukla belirlenmesi sağlanmıştır. Kullanılan NER ve ABSA modelleri, metin analizi süreçlerinde yüksek doğruluk ve etkinlik sunarak, proje hedeflerimize ulaşmamızı sağlamıştır.
