@@ -55,9 +55,9 @@
     <h1>Dökümantasyon</h1>
 </div>
 
-## 1.Proje ve Ekip Tanıtımı
+## Proje ve Ekip Tanıtımı
 
-### 1.1 Ekip Tanıtımı
+### Ekip Tanıtımı
 Proje ekibi, Fırat Üniversitesi Yazılım Mühendisliği ve Bilgisayar Mühendisliği öğrencilerinden oluşmaktadır. Ekibimizi daha yakından tanımak için ekip tanıtım dosyamıza şuradan ulaşabilirsiniz. Ekip üyelerimiz:
 
 - Murat Aydoğan (Danışman)
@@ -66,7 +66,7 @@ Proje ekibi, Fırat Üniversitesi Yazılım Mühendisliği ve Bilgisayar Mühend
 - Uğur Şahin
 - Büşra Erdem
 
-### 1.2 Projenin Kapsamı ve Hedefleri
+### Projenin Kapsamı ve Hedefleri
 Bu proje, Teknofest Türkçe Doğal Dil İşleme yarışması için geliştirilmiştir ve Türkçe dilinde metin analizi yapmak amacıyla tasarlanmıştır. Proje, Türkçe dilinin yapısal ve anlamsal özelliklerine uygun olarak firma isimlerini tespit etmek ve bu firmalara atfedilen duygu tonlarını belirlemek için tasarlanmıştır.
 
 **Kapsam:** Projenin kapsamı, Türkçe dilinde yazılmış çeşitli metin türlerinden oluşan geniş bir veri setinin analizini içerir. Bu metinler arasında sosyal medya paylaşımları, haber makaleleri, müşteri yorumları, blog yazıları ve proje ekibimizin ürettiği kaynaklar bulunmaktadır. Proje, Türkçe dilinde doğal dil işleme uygulamaları için önemli bir katkı sağlama ve Türkçe metinlerde firma adlarının ve duygu ifadelerinin doğru bir şekilde tanımlanmasını amaçlar.
@@ -78,7 +78,7 @@ Bu proje, Teknofest Türkçe Doğal Dil İşleme yarışması için geliştirilm
 - **Eğitim ve Yaygınlaştırma:** Proje çıktılarının eğitim amaçlı kullanılabilirliğini sağlamak.
 - **Gelecekteki Uygulamalar:** Elde edilen bulguların, Türkçe dilinde hizmet veren firmaların pazar algısını, müşteri geri bildirimlerini ve sosyal medya stratejilerini analiz etmelerinde kullanılabilmesi.
 
-### 1.3 Kullanılan Teknikler ve Yöntemler
+### Kullanılan Teknikler ve Yöntemler
 Bu projede, doğal dil işleme alanındaki ileri düzey teknikler ve yöntemler kullanılarak, Türkçe dilinde yazılmış metinlerin analizi gerçekleştirilmiştir. Proje, derin öğrenme ve makine öğrenimi tekniklerinin yanı sıra, dilin yapısal özelliklerini dikkate alan özel NLP yöntemlerini de içermektedir.
 
 - **Varlık Adı Tanıma (NER) Modeli:** Projede, metinlerde geçen firma isimlerini tanımlamak için gelişmiş Varlık Adı Tanıma (NER) modelleri kullanılmıştır. Bu modeller, BERT gibi önceden eğitilmiş dil modelleri temel alınarak özelleştirilmiş ve Türkçe diline uyarlanmıştır. NER modeli, metin içerisindeki belirli varlıkların (örneğin, şirket isimleri) doğru ve etkili bir şekilde tespit edilmesini sağlar.
@@ -93,12 +93,12 @@ Bu projede, doğal dil işleme alanındaki ileri düzey teknikler ve yöntemler 
 
 Bu teknikler ve yöntemler, projenin başarılı bir şekilde gerçekleştirilmesi ve hedeflerine ulaşması için önemli katkılar sağlamıştır. Projenin çıktıları, Türkçe dilinde doğal dil işleme alanındaki araştırmalara ve uygulamalara değerli bir katkı sunmaktadır.
 
-## 2. Veri Kümesi
+## Veri Kümesi
 
-### 2.1 Veri Kaynağı ve Toplama Süreci
+### Veri Kaynağı ve Toplama Süreci
 Modelimizi geliştirirken iki farklı veri kümesi kullandık. İlk veri kümesi ABSA (Aspect-Based Sentiment Analysis) veri kümesi olup müşteri yorumlarındaki görüşlerin ve hedef varlıkların saptanması için tasarlanmıştır. İkinci veri kümesi ise NER (Named Entity Recognition) veri kümesidir. Bu veri kümesi, metindeki firmaların tanınması ve sınıflandırılması için kullanılıyor. Veri setlerini oluştururken öncelikle modelimiz için gerekli doğru formatı belirledik. Yapay zeka araçlarını kullanarak belirlediğimiz formatta veri setini oluşturarak modelin gerçek performansını öğrenmeyi amaçladık.
 
-### 2.2 Veri Setinin Genel Yapısı ve Veri Setinin İçeriği
+### Veri Setinin Genel Yapısı ve Veri Setinin İçeriği
 
 ### ABSA (Aspect-Based Sentiment Analysis) Veri Kümesi
 Bu veri kümesi, müşteri yorumlarındaki görüşlerin (sentiment) ve hedef varlıkların (entities) belirlenmesi amacıyla kullanılır. Her bir örnek, bir metin parçası ve bu metindeki varlıklar ile bu varlıkların duygusal yönelimlerini (pozitif, negatif, nötr) içerir. 
@@ -365,13 +365,27 @@ Projemizin analiz ve sonuçları, kullanılan NER ve ABSA modellerinin üstün p
 ## Sonuç ve Gelecek Çalışmalar
 
 ### Projenin Sonuçları ve Genel Değerlendirme
-Projenin genel sonuçları değerlendirilmiş ve elde edilen bulgular özetlenmiştir. Proje hedeflerine ne ölçüde ulaşıldığı ve projenin başarısı analiz edilmiştir.
+Teknofest Türkçe Doğal Dil İşleme Yarışması'nda Entity Bazlı Duygu Analizi kategorisinde yürüttüğümüz proje, müşteri geri bildirimlerinin analiz edilerek belirli hizmet yönleri veya ürün özellikleriyle ilgili duyguların sınıflandırılmasını hedeflemektedir. Bu doğrultuda, üç ana model geliştirdik:
+
+Projeyi gerçekleştirirken, özelleştirilmiş duygu analizi modeli yerine ABSA modelinin daha uygun olduğuna karar verdik. ABSA modeli, NER modelinden aldığı varlıklar üzerinde çalışarak, yorumları doğru entity'ye atfetme ve ilgili hizmet yönlerine göre duygu analizi yapma görevini başarıyla yerine getirdi.
+
+Çeşitli hiperparametreler, aktivasyon fonksiyonları ve optimizasyon fonksiyonları deneyerek, modelin doğruluğunu artırdık. Farklı mimarilerdeki modelleri deneyerek en iyi performansı elde etmeye çalıştık. Özellikle Türkçe dilindeki ima cümlelerini de veri setine ekleyerek, bu zorlu alanda önemli bir adım attık.
 
 ### Gelecekteki İyileştirme Alanları ve Öneriler
-Projenin gelecekteki iyileştirme alanları ve bu alanlarda yapılabilecek çalışmalar önerilmiştir. Bu öneriler, projenin daha da geliştirilmesi ve daha geniş bir etki yaratması için yol gösterici olacaktır.
+
+1. *Türkçe'nin İma Cümleleri Üzerine Çalışmalar*: İma cümleleri, duyguları dolaylı yoldan belirttiği için modelin duygu tespiti yapması genellikle zor olmaktadır. Bu alanda daha fazla veri ve model optimizasyonu yaparak, ima cümlelerinin analizi iyileştirilebilir.
+
+2. *Sektör Bazlı Performans Analizi*: Aynı sektörde çalışan firmalar hakkında yapılan olumlu ve olumsuz yorumlar, hangi şirketlerin hangi alanlarda daha iyi olduğunu gösterebilir. Bu analiz, firmaların kendilerini geliştirmeleri gereken alanları görmelerine yardımcı olabilir.
+
+3. *Spesifik Sektörlerde Çalışma Önerileri*: Belirli sektörlerdeki olumsuz yorumlar, bu alanlarda yapılması gereken geliştirmeler için öneriler sunabilir. Örneğin, müşteri hizmetleri ile ilgili sıkça olumsuz yorumlar alan bir sektör, bu alana yönelik iyileştirmeler yapabilir.
+
+4. *Veri Setlerinin Geliştirilmesi*: Hazırladığımız spesifik ve nadir bulunan veri setleri, Türkçe Doğal Dil İşleme alanında önemli bir etki yaratmaktadır. Bu veri setlerini genişleterek ve daha fazla örnek ekleyerek, modellerin doğruluğunu ve genel performansını artırabiliriz.
 
 ### TDDi'ye Katkısı
-Projenin TDDi'ye katkısı değerlendirilmiş ve elde edilen bulguların TDDi'nin genel hedefleriyle nasıl uyumlu olduğu analiz edilmiştir. Projenin TDDi'ye sağladığı değer ve gelecekteki projelere katkıları özetlenmiştir.
+
+*Spesifik Veri Setleri*: Özellikle ima cümleleri için hazırladığımız veri seti, daha önce bu alanda yapılmamış bir çalışmayı temsil etmektedir. Bu sayede, Türkçe'deki duygu tespitine yönelik zorluklar aşılabilir ve daha doğru analizler yapılabilir.
+
+*Model Performansı*: Özelleştirilmiş ABSA modelimiz, NER modelinden aldığı varlıklar sayesinde başarılı bir şekilde çalışmaktadır. Bu, diğer araştırmacılara ve uygulayıcılara yol gösterici olabilir.
 
 ## Referanslar
 Projede kullanılan kaynaklar ve referanslar listelenmiştir. Bu referanslar, projede kullanılan teknikler ve yöntemler hakkında daha fazla bilgi edinmek isteyenler için yol gösterici olacaktır.
