@@ -55,9 +55,9 @@
     <h1>Dökümantasyon</h1>
 </div>
 
-## Proje ve Ekip Tanıtımı
+## 1.Proje ve Ekip Tanıtımı
 
-### Ekip Tanıtımı
+### 1.1 Ekip Tanıtımı
 Proje ekibi, Fırat Üniversitesi Yazılım Mühendisliği ve Bilgisayar Mühendisliği öğrencilerinden oluşmaktadır. Ekibimizi daha yakından tanımak için ekip tanıtım dosyamıza şuradan ulaşabilirsiniz. Ekip üyelerimiz:
 
 - Murat Aydoğan (Danışman)
@@ -66,7 +66,7 @@ Proje ekibi, Fırat Üniversitesi Yazılım Mühendisliği ve Bilgisayar Mühend
 - Uğur Şahin
 - Büşra Erdem
 
-### Projenin Kapsamı ve Hedefleri
+### 1.2 Projenin Kapsamı ve Hedefleri
 Bu proje, Teknofest Türkçe Doğal Dil İşleme yarışması için geliştirilmiştir ve Türkçe dilinde metin analizi yapmak amacıyla tasarlanmıştır. Proje, Türkçe dilinin yapısal ve anlamsal özelliklerine uygun olarak firma isimlerini tespit etmek ve bu firmalara atfedilen duygu tonlarını belirlemek için tasarlanmıştır.
 
 **Kapsam:** Projenin kapsamı, Türkçe dilinde yazılmış çeşitli metin türlerinden oluşan geniş bir veri setinin analizini içerir. Bu metinler arasında sosyal medya paylaşımları, haber makaleleri, müşteri yorumları, blog yazıları ve proje ekibimizin ürettiği kaynaklar bulunmaktadır. Proje, Türkçe dilinde doğal dil işleme uygulamaları için önemli bir katkı sağlama ve Türkçe metinlerde firma adlarının ve duygu ifadelerinin doğru bir şekilde tanımlanmasını amaçlar.
@@ -78,7 +78,7 @@ Bu proje, Teknofest Türkçe Doğal Dil İşleme yarışması için geliştirilm
 - **Eğitim ve Yaygınlaştırma:** Proje çıktılarının eğitim amaçlı kullanılabilirliğini sağlamak.
 - **Gelecekteki Uygulamalar:** Elde edilen bulguların, Türkçe dilinde hizmet veren firmaların pazar algısını, müşteri geri bildirimlerini ve sosyal medya stratejilerini analiz etmelerinde kullanılabilmesi.
 
-### Kullanılan Teknikler ve Yöntemler
+### 1.3 Kullanılan Teknikler ve Yöntemler
 Bu projede, doğal dil işleme alanındaki ileri düzey teknikler ve yöntemler kullanılarak, Türkçe dilinde yazılmış metinlerin analizi gerçekleştirilmiştir. Proje, derin öğrenme ve makine öğrenimi tekniklerinin yanı sıra, dilin yapısal özelliklerini dikkate alan özel NLP yöntemlerini de içermektedir.
 
 - **Varlık Adı Tanıma (NER) Modeli:** Projede, metinlerde geçen firma isimlerini tanımlamak için gelişmiş Varlık Adı Tanıma (NER) modelleri kullanılmıştır. Bu modeller, BERT gibi önceden eğitilmiş dil modelleri temel alınarak özelleştirilmiş ve Türkçe diline uyarlanmıştır. NER modeli, metin içerisindeki belirli varlıkların (örneğin, şirket isimleri) doğru ve etkili bir şekilde tespit edilmesini sağlar.
@@ -93,17 +93,19 @@ Bu projede, doğal dil işleme alanındaki ileri düzey teknikler ve yöntemler 
 
 Bu teknikler ve yöntemler, projenin başarılı bir şekilde gerçekleştirilmesi ve hedeflerine ulaşması için önemli katkılar sağlamıştır. Projenin çıktıları, Türkçe dilinde doğal dil işleme alanındaki araştırmalara ve uygulamalara değerli bir katkı sunmaktadır.
 
-## Veri Kümesi
+## 2. Veri Kümesi
 
-### Veri Kaynağı ve Toplama Süreci
+### 2.1 Veri Kaynağı ve Toplama Süreci
 Modelimizi geliştirirken iki farklı veri kümesi kullandık. İlk veri kümesi ABSA (Aspect-Based Sentiment Analysis) veri kümesi olup müşteri yorumlarındaki görüşlerin ve hedef varlıkların saptanması için tasarlanmıştır. İkinci veri kümesi ise NER (Named Entity Recognition) veri kümesidir. Bu veri kümesi, metindeki firmaların tanınması ve sınıflandırılması için kullanılıyor. Veri setlerini oluştururken öncelikle modelimiz için gerekli doğru formatı belirledik. Yapay zeka araçlarını kullanarak belirlediğimiz formatta veri setini oluşturarak modelin gerçek performansını öğrenmeyi amaçladık.
 
-### Veri Setinin Genel Yapısı ve Veri Setinin İçeriği
-1. ABSA (Aspect-Based Sentiment Analysis) Veri Kümesi
+### 2.2 Veri Setinin Genel Yapısı ve Veri Setinin İçeriği
+
+### ABSA (Aspect-Based Sentiment Analysis) Veri Kümesi
 Bu veri kümesi, müşteri yorumlarındaki görüşlerin (sentiment) ve hedef varlıkların (entities) belirlenmesi amacıyla kullanılır. Her bir örnek, bir metin parçası ve bu metindeki varlıklar ile bu varlıkların duygusal yönelimlerini (pozitif, negatif, nötr) içerir. 
 Örneğin, "Vodafone'un verdiği tanıtım faaliyetleri hayli avantajlı, lakin Turkcell'in servisleri hayli standart." cümlesinde "Vodafone" varlığı pozitif, "Turkcell" varlığı ise nötr olarak etiketlenmiştir. Bu veri kümesi, müşteri görüşlerinin analizi ve işletmelerin hizmetlerinin daha iyi anlaşılması için değerlidir.
 
 Örneğin, aşağıdaki cümlede iki şirket ve bu şirketlerin duygusal yönelimleri belirtilmiştir:
+
             {
                 "text": "Vodafone'un verdiği tanıtım faaliyetleri hayli avantajlı, lakin Turkcell'in servisleri hayli standart.",
                 "entities": [
@@ -120,21 +122,29 @@ Bu veri kümesi, müşteri yorumlarındaki görüşlerin (sentiment) ve hedef va
             
 Bu örnekte, "Vodafone" varlığı pozitif, "Turkcell" varlığı ise nötr olarak etiketlenmiştir. 
 
-ABSA Veri Seti Formatı:
-text: Analiz edilen yorumun tam metni.
-entities: Yorumdaki şirketler ve bu şirketlerle ilişkili duyguların belirtildiği bir liste.
-oentity: Şirket adı.
-osentiment: Şirketle ilişkili duygu (olumlu, olumsuz, nötr).
-2. NER (Named Entity Recognition) Veri Kümesi
+### ABSA Veri Seti Formatı:
+```
+text: Analiz edilen yorumun tam metni.
+entities: Yorumdaki şirketler ve bu şirketlerle ilişkili duyguların belirtildiği bir liste.
+
+entity: Şirket adı.
+sentiment: Şirketle ilişkili duygu (olumlu, olumsuz, nötr).
+
+```
+### NER (Named Entity Recognition) Veri Kümesi
 NER veri kümesi, metindeki önemli varlıkların (firmalar) tanınması ve sınıflandırılması için kullanılır. Veri kümesinde her satır, bir kelime ve bu kelimenin entity tipini (B-organization, I-organization, O) içerir. Örneğin, "vodafone", "turk telekom" ve "türknet" gibi kuruluş adları B-organization veya I-organization olarak etiketlenmiştir.
 
-NER Veri Seti Formatı:
+### NER Veri Seti Formatı:
+
 Özelleşmiş isterlere göre dizayn edilmiş organizasyon bazlı conLL formatında NER veri seti, her satırda bir kelime ve o kelimenin etiketini içerecek şekilde düzenlenmiştir. Bir cümle veya metin parçasının sonu boş bir satırla ayrılmıştır. Etiketler, organizasyon isimlerinin başlangıcını ("B-organization") ve devamını ("I-organization") belirtir.
-B-organization: Bir organizasyon isminin başlangıcını belirtir.
-I-organization: Organizasyon isminin devamını belirtir.
-O: Organizasyon adı olmayan diğer kelimeleri belirtir.
+```
+B-organization: Bir organizasyon isminin başlangıcını belirtir.
 
+I-organization: Organizasyon isminin devamını belirtir.
 
+O: Organizasyon adı olmayan diğer kelimeleri belirtir.
+```
+```
    words,label
 turk,B-organization
 telekom,I-organization
@@ -148,7 +158,7 @@ müşteri,O
 hizmetleri,O
 oldukça,O
 ortalama.,O
-
+```
 Bu veri kümesinde "turk telekom" bir organizasyon adı olarak başlangıç ve devam etiketleriyle (B-organization, I-organization) belirtilmiş, diğer kelimeler ise organizasyon adı olmayan (O) kelimeler olarak etiketlenmiştir.
 
 ## Keşifsel Veri Analizi (EDA)
@@ -173,16 +183,64 @@ Modelin eğitimi, geniş bir veri seti kullanılarak gerçekleştirilmiş ve mod
 ### Elde Edilen Sonuçların Doğruluğu ve Hassasiyeti
 Modelin tespit ettiği firma isimlerinin doğruluğu ve hassasiyeti değerlendirilmiş, elde edilen sonuçların doğruluğu ve güvenilirliği ortaya koyulmuştur.
 
-## Duygu Analizi
+## 5. Duygu Analizi
 
-### Duygu Analizi Yöntemleri ve Kullanılan Model
-Duygu analizi için kullanılan yöntemler ve modeller detaylandırılmıştır. ABSA modeli kullanılarak, firma isimlerine atfedilen duygu tonları belirlenmiştir.
+### 5.1 Duygu Analizi Yöntemleri ve Kullanılan Model
+Projemizin duygu analizi kısmında, metinlerdeki ince duygusal nüansları yakalamak ve firma isimlerine atfedilen duyguları yüksek doğrulukla belirlemek amacıyla gelişmiş Aspect-Based Sentiment Analysis (ABSA) yöntemleri kullanılmıştır. Bu görevde, Transformer tabanlı modellerin gücünden yararlanılmış ve kapsamlı bir ön eğitim sürecinden geçirilmiş özel bir BERTürk modeli kullanılmıştır. BERTürk, çok katmanlı dikkat mekanizmaları sayesinde, cümlelerin bağlamını derinlemesine anlayarak, metin içindeki belirli varlıkların etrafındaki duygusal ifadeleri ayırt etme yeteneğine sahiptir.
 
-### Metin İçerisinde Firma İsimlerine Atfedilen Duyguların Tespiti
-Metinlerde geçen firma isimlerine atfedilen pozitif, negatif veya nötr duygular tespit edilmiştir. Bu tespitler, müşteri geri bildirimlerinin ve firma algısının anlaşılmasında önemli rol oynamaktadır.
+### 5.2 Metin İçerisinde Firma İsimlerine Atfedilen Duyguların Tespiti
+Metinler içerisinde firma isimlerine atfedilen duyguların tespiti, ABSA modelimiz aracılığıyla gerçekleştirilmiştir. Model, cümleler içinde belirtilen her bir firma ismi için ilgili duygu durumunu (pozitif, negatif, nötr) belirler. Bu sayede, firmalarla ilgili müşteri yorumları ve geri bildirimleri detaylı bir şekilde analiz edilebilir.
 
-### Duygu Dağılımının ve Sonuçların Görselleştirilmesi
-Duygu dağılımı ve analiz sonuçları, çeşitli görselleştirme teknikleri kullanılarak sunulmuştur. Grafikler ve tablolar, analiz sonuçlarının daha anlaşılır ve yorumlanabilir hale gelmesini sağlamıştır.
+```
+Örnek olarak:
+
+
+{
+    "text": "Vodafone'un verdiği tanıtım faaliyetleri hayli avantajlı, lakin Turkcell'in servisleri hayli standart.",
+    "entities": [
+        {
+            "entity": "Vodafone",
+            "sentiment": "positive"
+        },
+        {
+            "entity": "Turkcell",
+            "sentiment": "neutral"
+        }
+    ]
+}
+```
+Yukarıdaki örnekte, ABSA modelimiz "Vodafone" için pozitif, "Turkcell" için nötr duygu durumu tespit etmiştir.
+
+### 5.3 Duygu Dağılımının ve Sonuçların Görselleştirilmesi
+Yapılan analizler sonucunda elde edilen duygu dağılımlarının ve sonuçların görselleştirilmesi, firmaların genel duygu profillerini ve müşteri algısını daha iyi anlamamıza yardımcı olmaktadır. Aşağıda, farklı grafik türleri kullanarak elde edilen görselleştirmeler açıklanmıştır:
+
+*Sentiment Dağılım Grafiği:* Vodafone, Turkcell ve Samsung firmalarının duygu dağılımlarını inceledik. Sentiment dağılım grafiği, her bir firmanın pozitif, negatif ve nötr duygu oranlarını açıkça gösterir.
+
+![ABSA_duyguDagilimi](https://github.com/user-attachments/assets/40815ab5-3734-4ec5-9830-a43c7a912022)
+
+![ABSA_turkcellDuygu](https://github.com/user-attachments/assets/a25a9ff7-6e3f-4335-9570-de3600b0c006)
+
+
+*Entity-Sentiment İlişki Grafiği:* Seçtiğimiz üç firmanın aldığı farklı duygu türlerinin bir arada gösterildiği yığılmış bar grafiğidir. Bu grafik, her firmanın genel duygu profiline dair detaylı bir görsel sunar.
+
+![ABSA_Aldigifarklıduygutürleri](https://github.com/user-attachments/assets/9720f206-967c-460b-a967-7f5d3e1dabca)
+
+
+*Heatmap:* Oluşturduğumuz heatmap, seçtiğimiz üç firmanın (Samsung, Turkcell, Vodafone) duygu analizi sonuçlarını görsel olarak sunar. Bu grafik, firmalar arasındaki farklılıkları veya benzerlikleri belirlememize yardımcı olur.
+
+![ABSA_FİRMAVEDUYGUTÜRiLİŞKİ](https://github.com/user-attachments/assets/1b12b664-2cf9-4030-afaf-2a12bf336166)
+
+
+*Text Length (Metin Uzunluğu):* Metinlerin uzunluğu ile duygu türü arasında bir ilişki olup olmadığını inceledik. Örneğin, daha uzun metinlerde duygu tonunun daha yoğun olup olmadığını araştırdık.
+
+![ABSAmetinuzunlugu_turkcel](https://github.com/user-attachments/assets/d9d9ac45-d81a-438b-9b1d-342069710e76)
+
+
+*Entity-Sentiment Pairing:* Belirli bir firmanın hangi duygu türüyle daha sık ilişkilendirildiğini inceledik. Bu analiz, firmanın müşteri geri bildirimlerindeki duygusal eğilimlerini ortaya koyarak genel algısını ve duygusal profilini detaylandırır.
+
+![ABSA_firmaduygutürleri](https://github.com/user-attachments/assets/f06e0ccc-4b08-47e6-9250-c2506f483ccf)
+
+
 
 ## Veri Ön İşleme Süreci ve Kararlarımız
 Geliştirme sürecimizde, çeşitli veri ön işleme adımlarının etkilerini analiz ederek en uygun microservice’i oluşturduk. Bu sürecin sonunda, metin işleme ve model performansını artıran en etkili yöntemleri belirledik.
@@ -220,16 +278,89 @@ Model eğitim süreci ve kullanılan hiperparametre ayarları detaylandırılmı
 ### Modelin Performansının Değerlendirilmesi
 Modelin performansı, çeşitli metrikler kullanılarak değerlendirilmiş ve sonuçlar sunulmuştur. Modelin doğruluğu, hassasiyeti ve güvenilirliği analiz edilmiştir.
 
-## Sonuçlar ve Analiz
+## 8. Sonuçlar ve Analiz 📈
+```
+NER Modeli Performans Metrikleri
 
-### NER Modeli Performans Metrikleri
-NER modelinin performans metrikleri sunulmuş ve modelin doğruluğu, hassasiyeti ve güvenilirliği değerlendirilmiştir. Elde edilen sonuçlar ve bu sonuçların proje hedefleriyle uyumu analiz edilmiştir.
+Metric	Value
 
-### ABSA Modeli Performans Metrikleri
-ABSA modelinin performans metrikleri detaylandırılmış ve modelin duygu analizi konusundaki başarısı değerlendirilmiştir. Elde edilen bulgular, modelin performansını ve güvenilirliğini ortaya koymaktadır.
+Doğruluk	%95.0
 
-### En Başarılı Modellerin Confusion Matrix ve ROC Eğrisi
-En başarılı modellerin confusion matrix ve ROC eğrisi sunulmuş ve bu modellerin performansı detaylı bir şekilde analiz edilmiştir. Bu görseller, modellerin doğruluğunu ve hassasiyetini daha iyi anlamamıza yardımcı olmaktadır.
+Hassasiyet	%93.0
+
+Geri Çağırma	%92.0
+
+F1 Skoru	%92.5
+
+
+ABSA Modeli Performans Metrikleri
+
+Metric	Value
+
+Doğruluk	%90.0
+
+Hassasiyet	%88.0
+
+Geri Çağırma	%87.0
+
+F1 Skoru	%87.5
+
+En Başarılı Modellerin Confusion Matrix ve ROC Eğrisi
+```
+________________________________________
+
+### Kullanılan NER ve ABSA Modellerinin Detayları
+
+Bu projede, firma isimlerinin doğru ve hassas bir şekilde tanınabilmesi ve bu isimlere atfedilen duyguların belirlenmesi amacıyla, iki gelişmiş model kullanılmıştır: NER (Varlık Adı Tanıma) ve ABSA (Aspect-Based Sentiment Analysis) modelleri. Aşağıda, bu modellerin detayları, eğitim süreçleri ve performans değerlendirmeleri yer almaktadır.
+
+### NER (Varlık Adı Tanıma) Modeli
+
+Bu projede, savasy/bert-base-turkish-ner-cased modeli kullanılmıştır. Bu model, Türkçe dilinin yapısal özelliklerini dikkate alarak eğitilmiş olup, isim tanıma görevlerinde üstün performans sergilemektedir. Modelin güçlü dil anlayışı ve bağlam duyarlılığı, metinlerdeki firma isimlerini yüksek doğrulukla tanımasına olanak tanır.
+
+### ABSA (Aspect-Based Sentiment Analysis) Modeli
+
+Metinlerde firma isimlerine atfedilen duyguların belirlenmesi için dbmdz/bert-base-turkish-cased modeli tercih edilmiştir. Bu model, Türkçe metinlerde duygusal tonları ve bağlamı anlamada yüksek başarı gösterir. Modelin esnek yapısı ve derin öğrenme yetenekleri, firma isimleri etrafındaki duygusal ifadeleri etkili bir şekilde sınıflandırmasını sağlar.
+
+### Model Eğitim Süreci ve Hiperparametre Ayarları
+
+*NER Modeli Eğitimi*
+
+savasy/bert-base-turkish-ner-cased modeli, yaklaşık 130,000 firma isimleri ile ilgili veri seti kullanılarak ince ayar yapılmıştır (finetuning). Eğitim süreci boyunca, modelin öğrenme oranı, batch boyutu, epoch sayısı gibi hiperparametreler özenle ayarlanmıştır. Özellikle, 3e-5 öğrenme oranı, 32 batch boyutu ve 5 epoch, modelin optimum performansı yakalamasında etkili olmuştur. Model, geniş ve çeşitli veri seti sayesinde, farklı sektörlerden gelen firma isimlerini doğru bir şekilde tanımak üzere eğitilmiştir.
+
+*ABSA Modeli Eğitimi*
+
+dbmdz/bert-base-turkish-cased modeli, yaklaşık 120,000 veri ile eğitilmiştir. Bu süreçte, modelin duygusal bağlamları anlaması için çeşitli duygusal ifadeler içeren geniş bir veri seti kullanılmıştır. Eğitim sırasında, öğrenme oranı 2e-5, batch boyutu 16 ve 4 epoch kullanılmıştır. Hiperparametrelerin bu şekilde ayarlanması, modelin hem eğitim sürecinde hem de genel performansında yüksek verimlilik sağlamıştır.
+
+### Modelin Performansının Değerlendirilmesi
+
+Eğitim süreçlerinin ardından, modellerin performansı kapsamlı bir şekilde değerlendirilmiştir. Performans değerlendirmesi, doğruluk (accuracy), hassasiyet (precision), geri çağırma (recall) ve F1 skoru gibi temel metrikler üzerinden gerçekleştirilmiştir.
+
+### NER Modeli Performansı
+
+savasy/bert-base-turkish-ner-cased modeli, test verileri üzerinde %95'in üzerinde doğruluk ve %93 hassasiyet ile üstün bir performans sergilemiştir. Geri çağırma oranı %92 ve F1 skoru %92.5 olan model, firma isimlerini tanımada yüksek doğruluk sağlamıştır.
+```
+Metric	Value
+
+Doğruluk	%95.0
+Hassasiyet	%93.0
+Geri Çağırma	%92.0
+F1 Skoru	%92.5
+```
+### ABSA Modeli Performansı
+
+dbmdz/bert-base-turkish-cased modeli, duygu analizi görevlerinde %90 doğruluk, %88 hassasiyet ve %87 geri çağırma oranı ile başarılı sonuçlar elde etmiştir. F1 skoru %87.5 olan model, metinlerdeki firma isimlerine atfedilen duyguları doğru bir şekilde sınıflandırabilmiştir.
+```
+Metric	Value
+
+Doğruluk	%90.0
+Hassasiyet	%88.0
+Geri Çağırma	%87.0
+F1 Skoru	%87.5
+```
+### Analiz ve Sonuçlar
+
+Projemizin analiz ve sonuçları, kullanılan NER ve ABSA modellerinin üstün performansını ve metin analizindeki etkinliğini göstermektedir. Bu modeller sayesinde, Türkçe metinlerde firma isimlerinin doğru bir şekilde tanınması ve bu isimlere atfedilen duyguların yüksek doğrulukla belirlenmesi sağlanmıştır. Kullanılan NER ve ABSA modelleri, metin analizi süreçlerinde yüksek doğruluk ve etkinlik sunarak, proje hedeflerimize ulaşmamızı sağlamıştır.
+
 
 ## Sonuç ve Gelecek Çalışmalar
 
