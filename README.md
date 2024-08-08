@@ -50,7 +50,7 @@
 <div align="center">
     <h1>Dökümantasyon</h1>
 </div>
-
+<br><br>
 ## 1. Proje ve Ekip Tanıtımı
 
 ### Ekip Tanıtımı
@@ -93,8 +93,6 @@ Bu teknikler ve yöntemler, projenin başarılı bir şekilde gerçekleştirilme
 
 ### Veri Kaynağı ve Toplama Süreci
 Modelimizi geliştirirken iki farklı veri kümesi kullandık. İlk veri kümesi ABSA (Aspect-Based Sentiment Analysis) veri kümesi olup müşteri yorumlarındaki görüşlerin ve hedef varlıkların saptanması için tasarlanmıştır. İkinci veri kümesi ise NER (Named Entity Recognition) veri kümesidir. Bu veri kümesi, metindeki firmaların tanınması ve sınıflandırılması için kullanılıyor. Veri setlerini oluştururken öncelikle modelimiz için gerekli doğru formatı belirledik. Yapay zeka araçlarını kullanarak belirlediğimiz formatta veri setini oluşturarak modelin gerçek performansını öğrenmeyi amaçladık.
-
-### Veri Setinin Genel Yapısı ve Veri Setinin İçeriği
 
 ### ABSA (Aspect-Based Sentiment Analysis) Veri Kümesi
 Bu veri kümesi, müşteri yorumlarındaki görüşlerin (sentiment) ve hedef varlıkların (entities) belirlenmesi amacıyla kullanılır. Her bir örnek, bir metin parçası ve bu metindeki varlıklar ile bu varlıkların duygusal yönelimlerini (pozitif, negatif, nötr) içerir. 
