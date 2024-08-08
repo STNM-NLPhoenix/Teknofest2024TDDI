@@ -2,34 +2,34 @@
 
 ## 📜 İçerik
 
-1. [**Proje ve Ekip Tanıtımı**](#proje-ve-ekip-tanıtımı) 📋
+1. [**Proje ve Ekip Tanıtımı**](#1-proje-ve-ekip-tanıtımı) 📋
    - [Ekip Tanıtımı](#ekip-tanıtımı)
    - [Projenin Kapsamı ve Hedefleri](#projenin-kapsamı-ve-hedefleri)
    - [Kullanılan Teknikler ve Yöntemler](#kullanılan-teknikler-ve-yöntemler)
 
-2. [**Veri Kümesi**](#veri-kümesi) 📊
+2. [**Veri Kümesi**](#2-veri-kümesi) 📊
    - [Veri Kaynağı ve Toplama Süreci](#veri-kaynağı-ve-toplama-süreci)
    - [Veri Setinin Genel Yapısı](#veri-setinin-genel-yapısı)
    - [Veri Setinin İçeriği](#veri-setinin-içeriği)
 
-3. [**Keşifsel Veri Analizi (EDA)**](#keşifsel-veri-analizi-eda) 🔍
+3. [**Keşifsel Veri Analizi (EDA)**](#3-keşifsel-veri-analizi-eda) 🔍
    - [Verinin Genel Özellikleri ve İlk İncelemeler](#verinin-genel-özellikleri-ve-ilk-incelemeler)
    - [Veri Görselleştirme ve Öne Çıkan Bulgular](#veri-görselleştirme-ve-öne-çıkan-bulgular)
    - [Firma İsimleri ve İlişkili Duygusal Analizler](#firma-isimleri-ve-ilişkili-duygusal-analizler)
 
-4. [**Firma İsimlerinin Tespiti**](#firma-isimlerinin-tespiti) 🏢
+4. [**Firma İsimlerinin Tespiti**](#4-firma-isimlerinin-tespiti) 🏢
    - [Varlık Adı Tanıma (NER) Modeli ile Firma İsimlerinin Belirlenmesi](#varlık-adı-tanıma-ner-modeli-ile-firma-isimlerinin-belirlenmesi)
    - [Modelin Eğitimi ve Değerlendirilmesi](#modelin-eğitimi-ve-değerlendirilmesi)
    - [Elde Edilen Sonuçların Doğruluğu ve Hassasiyeti](#elde-edilen-sonuçların-doğruluğu-ve-hassasiyeti)
 
-5. [**Duygu Analizi**](#duygu-analizi) 😊😡
-   - [5.1 Duygu Analizi Yöntemleri ve Kullanılan Model](#5-1-duygu-analizi-yöntemleri-ve-kullanılan-model)
-   - [5.2 Metin İçerisinde Firma İsimlerine Atfedilen Duyguların Tespiti](#5-2-metin-içerisinde-firma-isimlerine-atfedilen-duyguların-tespiti)
-   - [5.3 Duygu Dağılımının ve Sonuçların Görselleştirilmesi](#5-3-duygu-dağılımının-ve-sonuçların-görselleştirilmesi)
+5. [**Duygu Analizi**](#5-duygu-analizi) 😊😡
+   - [Duygu Analizi Yöntemleri ve Kullanılan Model](#5-1-duygu-analizi-yöntemleri-ve-kullanılan-model)
+   - [Metin İçerisinde Firma İsimlerine Atfedilen Duyguların Tespiti](#5-2-metin-içerisinde-firma-isimlerine-atfedilen-duyguların-tespiti)
+   - [Duygu Dağılımının ve Sonuçların Görselleştirilmesi](#5-3-duygu-dağılımının-ve-sonuçların-görselleştirilmesi)
 
-6. [**Veri Ön İşleme Süreci ve Kararlarımız**](#veri-ön-işleme-süreci-ve-kararlarımız) 🧹
+6. [**Veri Ön İşleme Süreci ve Kararlarımız**](#6-veri-ön-işleme-süreci-ve-kararlarımız) 🧹
 
-7. [**Sonuçlar ve Analiz**](#sonuçlar-ve-analiz) 📈
+7. [**Sonuçlar ve Analiz**](#7-sonuçlar-ve-analiz) 📈
    - [NER Modeli Performans Metrikleri](#ner-modeli-performans-metrikleri)
    - [ABSA Modeli Performans Metrikleri](#absa-modeli-performans-metrikleri)
    - [Kullanılan NER ve ABSA Modellerinin Detayları](#kullanılan-ner-ve-absa-modellerinin-detayları)
@@ -40,16 +40,16 @@
    - [NER Modeli Performansı](#ner-modeli-performansı)
    - [Analiz ve Sonuçlar](#analiz-ve-sonuçlar)
 
-8. [**Arayüz ve API Entegrasyonu**](#arayuz-ve-api-entegrasyonu)
+8. [**Arayüz ve API Entegrasyonu**](#8-arayuz-ve-api-entegrasyonu)
 
-9. [**Sonuç ve Gelecek Çalışmalar**](#sonuç-ve-gelecek-çalışmalar) 🚀
+9. [**Sonuç ve Gelecek Çalışmalar**](#9-sonuç-ve-gelecek-çalışmalar) 🚀
    - [Projenin Sonuçları ve Genel Değerlendirme](#projenin-sonuçları-ve-genel-değerlendirme)
    - [Gelecekteki İyileştirme Alanları ve Öneriler](#gelecekteki-iyileştirme-alanları-ve-öneriler)
    - [TDDi'ye Katkısı](#tddiye-katkısı)
 
-10. [**Referanslar**](#referanslar) 📚
+10. [**Referanslar**](#10-referanslar) 📚
 
-11. [**Bağımlılıklar**](#bağımlılıklar) 🛠️
+11. [**Bağımlılıklar**](#11-bağımlılıklar) 🛠️
     - [Projenin Çalışması İçin Gerekli Olan Python Paketleri](#projenin-çalışması-için-gerekli-olan-python-paketleri)
     - [Ortam Kurulumu ve Kullanım Talimatları](#ortam-kurulumu-ve-kullanım-talimatları)
 
@@ -57,6 +57,7 @@
     <h1>Dökümantasyon</h1>
 </div>
 <br><br>
+
 ## 1. Proje ve Ekip Tanıtımı
 
 ### Ekip Tanıtımı
