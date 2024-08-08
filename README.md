@@ -198,6 +198,10 @@ Bu grafikten elde ettiğimiz veriler sayesinde hazırladığımız veri setinde 
 
 ![NER Modeli Kelime Uzunluğu Grafiği](https://github.com/STNM-NLPhoenix/Teknofest2024TDDI/blob/main/ner_kelime_uzunluklari.png)
 
+![En Sık Kullanılan Kelimeler](https://github.com/STNM-NLPhoenix/Teknofest2024TDDI/blob/main/ner_en_cok_kelime.png)
+
+![1-nGram](https://github.com/STNM-NLPhoenix/Teknofest2024TDDI/blob/main/1-ngram.png)
+
 ### Firma İsimleri ve İlişkili Duygusal Analizler
 Firma isimlerine atfedilen duygusal tonlar analiz edilerek, firma isimleri ve bu isimlere atfedilen duygusal durumlar arasındaki ilişkiler incelenmiştir. Bu analizler, firma algısını ve müşteri geri bildirimlerini anlamada önemli bulgular sunmaktadır.
 
