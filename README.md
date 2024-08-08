@@ -194,7 +194,7 @@ Veri seti, çeşitli görselleştirme teknikleri kullanılarak analiz edilmişti
 <br><br><br><br>
 ![NER Modeli Sınıf Dağılım Grafiği](https://github.com/STNM-NLPhoenix/Teknofest2024TDDI/blob/main/ner_sinif_dagilimi.png)
 <br><br><br>
-Bu grafikten elde ettiğimiz veriler sayesinde hazırladığımız veri setinde O etiketi organizasyon etiketlerine oranla çok daha fazla olduğunu görebiliyoruz. Bu sebepten ötürü veri setindeki organizasyon etiketlerinin toplamını O etiketine yaklaştırmayı hedefleyerek bu yönde bir çalışma yapılmıştır. Bu çalışmaların sonucu aşağıdaki grafikte görülmektedir.
+Bu grafikten elde ettiğimiz bulgular sayesinde hazırladığımız veri setinde O etiketi, organizasyon etiketlerine oranla çok daha fazla olduğunu görebiliyoruz. Bu sebepten ötürü veri setindeki organizasyon etiketlerinin toplamını O etiketine yaklaştırmayı hedefleyerek bu yönde bir çalışma yapılmıştır. Bu çalışmaların sonucu aşağıdaki grafikte görülmektedir.
 <br><br><br>
 ![NER Modeli Sınıf Dağılım Grafiği](https://github.com/STNM-NLPhoenix/Teknofest2024TDDI/blob/main/ner_sinif_dagilim_duzenlenmis.png)
 <br><br><br>
@@ -205,8 +205,6 @@ Aşağıdaki ortalama kelime uzunluğu grafiği ile NER veri setindeki ortalama 
 Veri setinde en sık kullanılan kelimeleri tespit ederek bu kelimeler için Türkçe eş anlamlı sözcükler için eş anlam sözlüğü oluşturduk.Veri setindeki kelimelere ek olarak eş anlamlıları ile değiştirip veri setine yeniden ekledik.Bu sayede veri setimizi büyük oranda büyütmeyi amaçladık.
 <br><br><br>
 ![En Sık Kullanılan Kelimeler](https://github.com/STNM-NLPhoenix/Teknofest2024TDDI/blob/main/ner_en_cok_kelime.png)
-<br><br><br>
-![1-nGram](https://github.com/STNM-NLPhoenix/Teknofest2024TDDI/blob/main/1-ngram.png)
 <br><br><br>
 ### Firma İsimleri ve İlişkili Duygusal Analizler
 Firma isimlerine atfedilen duygusal tonlar analiz edilerek, firma isimleri ve bu isimlere atfedilen duygusal durumlar arasındaki ilişkiler incelenmiştir. Bu analizler, firma algısını ve müşteri geri bildirimlerini anlamada önemli bulgular sunmaktadır.
@@ -383,11 +381,11 @@ savasy/bert-base-turkish-ner-cased modeli, test verileri üzerinde %95'in üzeri
 Projemizin analiz ve sonuçları, kullanılan NER ve ABSA modellerinin üstün performansını ve metin analizindeki etkinliğini göstermektedir. Bu modeller sayesinde, Türkçe metinlerde firma isimlerinin doğru bir şekilde tanınması ve bu isimlere atfedilen duyguların yüksek doğrulukla belirlenmesi sağlanmıştır. Kullanılan NER ve ABSA modelleri, metin analizi süreçlerinde yüksek doğruluk ve etkinlik sunarak, proje hedeflerimize ulaşmamızı sağlamıştır.
 
 ## 8. Arayüz ve API Entegrasyonu
-![API](https://github.com/STNM-NLPhoenix/Teknofest2024TDDI/blob/main/turkcell.jpg)
-<br><br><br>
 Projede, kullanıcı dostu ve etkili bir arayüz oluşturmak için FastAPI kullanıldı. FastAPI, projede API'lerin hızlı ve verimli bir şekilde sunulmasını sağladı. Modern Python web framework'leri arasında yer alan FastAPI, yüksek performansı ve kolay entegrasyon imkanı sayesinde öne çıktı. Kullanıcılar, bu API'ler aracılığıyla modellere erişip sonuçları hızlıca elde edebildi ve API'lerin sunduğu esneklik sayesinde farklı cihaz ve platformlardan kolayca veri çekebildi.
 
 Ayrıca, Jinja şablon motoru projede önemli bir rol oynadı. Jinja, dinamik içerikler oluşturmak için güçlü bir araç sundu ve verilerin şablonlara kolayca entegre edilmesini sağladı. Bu sayede, kullanıcıya özelleştirilmiş ve dinamik içerikler sunularak, arayüzün kullanıcı ihtiyaçlarına göre şekillendirilmesi mümkün hale getirildi. Jinja, FastAPI ile mükemmel bir uyum içinde çalışarak projenin esnekliğini ve kullanıcı deneyimini daha da geliştirdi.
+<br>
+![API](https://github.com/STNM-NLPhoenix/Teknofest2024TDDI/blob/main/turkcell.jpg)
 
 ## 9. Sonuç ve Gelecek Çalışmalar
 
