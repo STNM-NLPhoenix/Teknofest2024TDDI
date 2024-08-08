@@ -23,27 +23,33 @@
    - [Elde Edilen Sonuçların Doğruluğu ve Hassasiyeti](#elde-edilen-sonuçların-doğruluğu-ve-hassasiyeti)
 
 5. [**Duygu Analizi**](#duygu-analizi) 😊😡
-   - [Duygu Analizi Yöntemleri ve Kullanılan Model](#duygu-analizi-yöntemleri-ve-kullanılan-model)
-   - [Metin İçerisinde Firma İsimlerine Atfedilen Duyguların Tespiti](#metin-içerisinde-firma-isimlerine-atfedilen-duyguların-tespiti)
-   - [Duygu Dağılımının ve Sonuçların Görselleştirilmesi](#duygu-dağılımının-ve-sonuçların-görselleştirilmesi)
+   - [5.1 Duygu Analizi Yöntemleri ve Kullanılan Model](#5-1-duygu-analizi-yöntemleri-ve-kullanılan-model)
+   - [5.2 Metin İçerisinde Firma İsimlerine Atfedilen Duyguların Tespiti](#5-2-metin-içerisinde-firma-isimlerine-atfedilen-duyguların-tespiti)
+   - [5.3 Duygu Dağılımının ve Sonuçların Görselleştirilmesi](#5-3-duygu-dağılımının-ve-sonuçların-görselleştirilmesi)
 
 6. [**Veri Ön İşleme Süreci ve Kararlarımız**](#veri-ön-işleme-süreci-ve-kararlarımız) 🧹
 
 7. [**Sonuçlar ve Analiz**](#sonuçlar-ve-analiz) 📈
    - [NER Modeli Performans Metrikleri](#ner-modeli-performans-metrikleri)
    - [ABSA Modeli Performans Metrikleri](#absa-modeli-performans-metrikleri)
-   - [En Başarılı Modellerin Confusion Matrix ve ROC Eğrisi](#en-başarılı-modellerin-confusion-matrix-ve-roc-eğrisi)
+   - [Kullanılan NER ve ABSA Modellerinin Detayları](#kullanılan-ner-ve-absa-modellerinin-detayları)
+   - [NER (Varlık Adı Tanıma) Modeli](#ner--varlık-adı-tanıma-modeli)
+   - [ABSA (Aspect-Based Sentiment Analysis) Modeli](#absa-aspect-based-sentiment-analysis-modeli)
+   - [Model Eğitim Süreci ve Hiperparametre Ayarları](#model-eğitim-süreci-ve-hiperparametre-ayarları)
+   - [Modelin Performansının Değerlendirilmesi](#modelin-performansının-değerlendirilmesi)
+   - [NER Modeli Performansı](#ner-modeli-performansı)
+   - [Analiz ve Sonuçlar](#analiz-ve-sonuçlar)
 
-8. [**Arayüz ve API Entegrasyonu**](#arayuz-ve-apı-entegrasyonu)
+8. [**Arayüz ve API Entegrasyonu**](#arayuz-ve-api-entegrasyonu)
 
 9. [**Sonuç ve Gelecek Çalışmalar**](#sonuç-ve-gelecek-çalışmalar) 🚀
    - [Projenin Sonuçları ve Genel Değerlendirme](#projenin-sonuçları-ve-genel-değerlendirme)
    - [Gelecekteki İyileştirme Alanları ve Öneriler](#gelecekteki-iyileştirme-alanları-ve-öneriler)
-   - [TDDi'ye Katkısı](#tddi-ye-katkısı)
+   - [TDDi'ye Katkısı](#tddiye-katkısı)
 
 10. [**Referanslar**](#referanslar) 📚
 
-11. [**Bağımlılıklar (Dependencies)**](#bağımlılıklar-dependencies) 🛠️
+11. [**Bağımlılıklar**](#bağımlılıklar) 🛠️
     - [Projenin Çalışması İçin Gerekli Olan Python Paketleri](#projenin-çalışması-için-gerekli-olan-python-paketleri)
     - [Ortam Kurulumu ve Kullanım Talimatları](#ortam-kurulumu-ve-kullanım-talimatları)
 
