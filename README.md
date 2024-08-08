@@ -414,16 +414,39 @@ Projeyi gerçekleştirirken, özelleştirilmiş duygu analizi modeli yerine ABSA
 *Model Performansı*: Özelleştirilmiş ABSA modelimiz, NER modelinden aldığı varlıklar sayesinde başarılı bir şekilde çalışmaktadır. Bu, diğer araştırmacılara ve uygulayıcılara yol gösterici olabilir.
 
 ## Referanslar
-Projede kullanılan kaynaklar ve referanslar listelenmiştir. Bu referanslar, projede kullanılan teknikler ve yöntemler hakkında daha fazla bilgi edinmek isteyenler için yol gösterici olacaktır.
 
-## Bağımlılıklar (Dependencies)
+- [Exploiting BERT for End-to-End Aspect-based Sentiment Analysis](https://arxiv.org/abs/1910.00883)
+- [Aspect-Based Sentiment Analysis using BERT](https://aclanthology.org/W19-6120/)
+- [Context-Guided BERT for Targeted Aspect-Based Sentiment Analysis](https://ojs.aaai.org/index.php/AAAI/article/view/17659)
+- [Modelling Context and Syntactical Features for Aspect-based Sentiment Analysis](https://aclanthology.org/2020.acl-main.293/)
+- [Aspect Based Twitter Sentiment Analysis on Vaccination and Vaccine Types in COVID-19 Pandemic With Deep Learning](https://ieeexplore.ieee.org/abstract/document/9640526?casa_token=9aSeVTLCdZoAAAAA:c3ZQugvAolVRaGuCghXpusXndgoerFNHxOEMhcprgWmdk8MhTmxIPOt-Oy1O0j-Z-iB3c-ZFkmQ)
+- [The Effect of BERT, ELECTRA and ALBERT Language Models on Sentiment Analysis for Turkish Product Reviews](https://ieeexplore.ieee.org/abstract/document/9559007?casa_token=yi6g1vtJjqMAAAAA:sIOwqyPR0_aCvD9rv44bd8zhwKpIPQg3hyoBtVspstyWKJqxzQU2kch40IgmkrNW0CGIVP8JqMA)
 
-### Projenin Çalışması İçin Gerekli Olan Python Paketleri
-Projenin çalışması için gerekli olan tüm Python paketleri ve bu paketlerin versiyonları listelenmiştir. Bu paketlerin kurulumu için gereken adımlar ve kullanım talimatları açıklanmıştır.
+# Bağımlılıklar
 
-### Ortam Kurulumu ve Kullanım Talimatları
-Projenin çalışması için gereken ortamın nasıl kurulacağı ve proje dosyalarının nasıl kullanılacağı adım adım açıklanmıştır. Bu talimatlar, projenin doğru bir şekilde çalıştırılması için gerekli olan tüm bilgileri içermektedir.
+### Sanal Ortamın Oluşturulması
 
-<div align="center">
-    <a href="your-call-to-action-link" style="background-color:#4CAF50; color:white; padding:10px 20px; text-align:center; text-decoration:none; display:inline-block; border-radius:5px;">Başlamak İçin Tıklayın</a>
-</div>
+Proje bağımlılıklarını izole bir ortamda yönetmek için bir sanal ortam oluşturun.
+
+      python -m venv myenv
+      source myenv/bin/activate  # MacOS/Linux
+      myenv\Scripts\activate  # Windows
+
+### CUDA 12.1 için
+
+      pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+
+### Proje için gerekli kütüphaneleri ve paketleri yükleyin:
+
+      pip install -r requirements.txt
+
+### Model Dosyasının Dizinine Gitme
+
+      cd path/to/your/model_directory
+
+### Model Dosyasının Çalıştırılması
+
+      python main.py
+
+
+Bu içerikler sanal ortamın oluşturulmasından başlayarak gerekli bağımlılıkların kurulmasına kadar tüm adımları içermektedir.
