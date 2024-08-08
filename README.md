@@ -198,22 +198,42 @@ Bu grafikten elde ettiğimiz bulgular sayesinde hazırladığımız veri setinde
 <br><br><br>
 ![NER Modeli Sınıf Dağılım Grafiği](https://github.com/STNM-NLPhoenix/Teknofest2024TDDI/blob/main/ner_sinif_dagilim_duzenlenmis.png)
 <br><br><br>
-Aşağıdaki ortalama kelime uzunluğu grafiği ile NER veri setindeki ortalama kelime uzunluklarını görmeyi hedefledik.
+Aşağıdaki grafik, bir NER (Adlandırılmış Varlık Tanıma) veri setindeki kelime uzunluklarının dağılımını göstermektedir. Grafik, veri setindeki ortalama kelime uzunluklarını daha iyi anlayabilmek için tasarlanmıştır. Yatay eksende ortalama kelime uzunlukları, dikey eksende ise bu uzunlukların frekansları yer almaktadır. Görselde, kelime uzunluklarının büyük bir kısmının 4 ile 8 arasında yoğunlaştığı, 15'ten uzun kelimelerin ise oldukça nadir olduğu görülmektedir. Bu tür bir analiz, NER modellerinin kelime uzunluklarına göre performansını değerlendirmek veya veri setinin genel dil yapısını anlamak için kullanılabilir. Ek olarak, grafik üzerinde KDE (Kernel Yoğunluk Tahmini) çizgisi de bulunmaktadır; bu çizgi, kelime uzunluklarının yoğunluk dağılımını pürüzsüz bir şekilde göstermektedir. Özellikle, 5-7 karakter uzunluğundaki kelimelerin en yüksek frekansa sahip olduğu dikkat çekmektedir. Bu tür görselleştirmeler, dil işleme görevlerinde veri setinin yapısına dair kritik bilgiler sunar.
 <br><br><br>
 ![NER Modeli Kelime Uzunluğu Grafiği](https://github.com/STNM-NLPhoenix/Teknofest2024TDDI/blob/main/ner_kelime_uzunluklari.png)
 <br><br><br>
-Veri setinde en sık kullanılan kelimeleri tespit ederek bu kelimeler için Türkçe eş anlamlı sözcükler için eş anlam sözlüğü oluşturduk.Veri setindeki kelimelere ek olarak eş anlamlıları ile değiştirip veri setine yeniden ekledik.Bu sayede veri setimizi büyük oranda büyütmeyi amaçladık.
+Aşağıdaki grafikte, veri setinde en sık geçen kelimelerin frekansları gösterilmektedir. Grafikte görüldüğü gibi, "ve", "bir", "ise", "genellikle" gibi bağlaçlar ve zarf fiiller en yüksek frekanslarla yer almaktadır. Bu kelimelerin sıklığı, veri setindeki genel dil yapısını ve kelime kullanım eğilimlerini anlamamıza olanak sağlar.
+
+Veri setinde en sık kullanılan bu kelimeleri belirledikten sonra, bu kelimeler için Türkçe eş anlamlı sözcükler tespit edilmiştir. Örneğin, "ve" kelimesi yerine "ile", "ama" kelimesi yerine "fakat" gibi eş anlamlılar kullanılmıştır. Bu işlem, veri setindeki kelimelerin varyasyonlarını artırarak, veri setinin kapsamını genişletmeyi ve zenginleştirmeyi amaçlamaktadır.
+
+Grafikteki kelimeler, veri setinin dil yapısını daha iyi anlamamıza yardımcı olurken, eş anlamlı sözcüklerle yapılan genişletme işlemi, doğal dil işleme (NLP) modellerinin performansını artırmak için daha çeşitli ve zengin bir veri seti oluşturmayı hedeflemektedir. Özellikle sık kullanılan kelimelerin eş anlamlılarının eklenmesi, modelin dilsel çeşitliliği daha iyi kavramasına ve farklı cümle yapılarını öğrenmesine katkı sağlamaktadır.
+
+Bu sayede, veri setimizi büyük oranda büyüterek, doğal dil işleme modellerinin daha geniş bir kelime dağarcığı ile çalışmasını sağlamayı amaçladık.
 <br><br><br>
 ![En Sık Kullanılan Kelimeler](https://github.com/STNM-NLPhoenix/Teknofest2024TDDI/blob/main/ner_en_cok_kelime.png)
 <br><br><br>
 ### Firma İsimleri ve İlişkili Duygusal Analizler
-Firma isimlerine atfedilen duygusal tonlar analiz edilerek, firma isimleri ve bu isimlere atfedilen duygusal durumlar arasındaki ilişkiler incelenmiştir. Bu analizler, firma algısını ve müşteri geri bildirimlerini anlamada önemli bulgular sunmaktadır.
-<br><br>
-ABSA veri setinin duygu dağılımının bir pasta grafiğini çıkardık.Bu sayede veri setinde duygu dağılımında oluşan eşitsizliği görme fırsatı yakaladık.
+<br>
+Aşağıdaki grafikte, ABSA (Aspect-Based Sentiment Analysis) veri setindeki firma isimlerine atfedilen duygusal tonların dağılımı, bir pasta grafiği aracılığıyla görselleştirilmiştir. Grafikte, verisetindeki yorumların %43,3'ünün pozitif, %29,5'inin negatif, ve %27,1'inin nötr olduğu görülmektedir. Bu grafik, firma algısını ve müşteri geri bildirimlerini anlamak adına önemli bir araç olarak kullanılabilir.
+
+Firma isimlerine atfedilen bu duygusal tonların analizi, müşteri yorumlarının firma algısı üzerindeki etkisini değerlendirmede kritik bilgiler sunmaktadır. Örneğin, pozitif yorumların yüksek oranı, firmaların genel olarak olumlu bir algıya sahip olduğunu, ancak negatif yorumların da göz ardı edilemeyecek bir oranda olduğunu göstermektedir. Nötr yorumların ise, müşterilerin belirli bir konuda olumlu ya da olumsuz bir yargıya varmadan, daha objektif bir bakış açısı sunduklarını işaret eder.
+
+Pasta grafiği, veri setindeki duygu dağılımındaki eşitsizlikleri ortaya koyarak, veri setinin daha dengeli bir duygu dağılımına sahip olup olmadığını değerlendirme imkanı sağlar. Duygusal tonlar arasındaki bu dengesizlik, analizlerin sonuçlarını etkileyebilir ve bu nedenle dikkate alınması gereken önemli bir faktördür. Özellikle, pozitif yorumların ağırlıkta olduğu bir veri seti, analiz sonuçlarının firma lehine eğilim gösterebileceğini düşündürebilir.
+
+Bu tür bir duygu dağılım analizi, firma isimleri ve müşteri geri bildirimleri arasındaki ilişkileri daha derinlemesine inceleyerek, müşteri memnuniyetinin ve marka algısının nasıl şekillendiğini anlamaya yardımcı olabilir.
 <br><br><br>
 ![Pasta](https://github.com/STNM-NLPhoenix/Teknofest2024TDDI/blob/main/duygu_dagilimi_pasta.png)
 <br><br>
-ABSA veri setinde en çok bulunan şirket isimlerini analiz ederek amacımıza uygun olup olmadığını kontrol edebildik.
+Aşağıdaki grafik, belirli şirketler için yapılan duygu analizi sonuçlarını göstermektedir. Grafikte, en sık kullanılan 10 şirketin (Adidas, Apple, Google, Microsoft, Nike, Samsung, Sony, Turkcell, Türk Telekom, Vodafone) adları yatay eksende yer alırken, dikey eksen bu şirketlere atfedilen yorumların frekansını göstermektedir. 
+
+Grafikteki sütunlar, her şirket için pozitif, nötr ve negatif duyguya sahip yorumların dağılımını göstermektedir. Üç farklı renk, bu duygu kategorilerini temsil eder:
+- Sarı: Pozitif duygu
+- Yeşil: Nötr duygu
+- Mor: Negatif duygu
+
+Örneğin, Apple için pozitif duyguya sahip yorumların sayısı en yüksekken, negatif duyguya sahip yorumlar daha düşük bir frekansta gözlenmektedir. Microsoft ve Samsung gibi diğer büyük teknoloji şirketleri için de benzer bir dağılım görülmektedir, ancak şirketten şirkete pozitif ve negatif yorumların oranı değişiklik göstermektedir.
+
+Bu grafik, belirli şirketlere yönelik genel kullanıcı duyarlılığını anlamak için kullanışlıdır ve şirketlerin marka imajını yönetmelerine yardımcı olabilir. ABSA (Aspect-Based Sentiment Analysis) veri setinde en sık rastlanan şirket isimlerini analiz etmek, verinin amaca uygunluğunu kontrol etmek için önemli bir adım olmuştur. Bu analiz sonucunda, verilerin şirketler arası duygu dağılımını anlamaya yönelik olduğu görülmektedir.
 <br><br><br>
 ![En Sık 10 Şirket](https://github.com/STNM-NLPhoenix/Teknofest2024TDDI/blob/main/en_cok_10_sirket.png)
 <br>
@@ -311,7 +331,7 @@ Karar: Kısaltmalar ve özel isimler için bu dönüşümü uygulamaktan vazgeç
 
 Sonuç
 Yukarıdaki ön işleme adımları ve gözlemler doğrultusunda, modelimiz için en uygun veri ön işleme stratejilerini belirledik ve bu adımları bir microservice olarak hayata geçirdik. Bu microservice, metinlerin doğru bir şekilde işlenmesini sağlayarak, hem NER hem de Duygu Analizi görevlerinde yüksek performans sergilemektedir.
-<br><br><br><br>
+<br>
 ## 7. Sonuçlar ve Analiz 📈
 
 ### NER Modeli Performans Metrikleri
