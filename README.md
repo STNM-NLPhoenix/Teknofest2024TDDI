@@ -29,26 +29,21 @@
 
 6. [**Veri Ön İşleme Süreci ve Kararlarımız**](#veri-ön-işleme-süreci-ve-kararlarımız) 🧹
 
-7. [**Model Geliştirme**](#model-geliştirme) 🤖
-   - [Kullanılan NER ve ABSA Modellerinin Detayları](#kullanılan-ner-ve-absa-modellerinin-detayları)
-   - [Model Eğitim Süreci ve Hiperparametre Ayarları](#model-eğitim-süreci-ve-hiperparametre-ayarları)
-   - [Modelin Performansının Değerlendirilmesi](#modelin-performansının-değerlendirilmesi)
-
-8. [**Sonuçlar ve Analiz**](#sonuçlar-ve-analiz) 📈
+7. [**Sonuçlar ve Analiz**](#sonuçlar-ve-analiz) 📈
    - [NER Modeli Performans Metrikleri](#ner-modeli-performans-metrikleri)
    - [ABSA Modeli Performans Metrikleri](#absa-modeli-performans-metrikleri)
    - [En Başarılı Modellerin Confusion Matrix ve ROC Eğrisi](#en-başarılı-modellerin-confusion-matrix-ve-roc-eğrisi)
 
-9. [**Arayüz ve API Entegrasyonu**](#arayuz-ve-apı-entegrasyonu)
+8. [**Arayüz ve API Entegrasyonu**](#arayuz-ve-apı-entegrasyonu)
 
-10. [**Sonuç ve Gelecek Çalışmalar**](#sonuç-ve-gelecek-çalışmalar) 🚀
+9. [**Sonuç ve Gelecek Çalışmalar**](#sonuç-ve-gelecek-çalışmalar) 🚀
    - [Projenin Sonuçları ve Genel Değerlendirme](#projenin-sonuçları-ve-genel-değerlendirme)
    - [Gelecekteki İyileştirme Alanları ve Öneriler](#gelecekteki-iyileştirme-alanları-ve-öneriler)
    - [TDDi'ye Katkısı](#tddi-ye-katkısı)
 
-11. [**Referanslar**](#referanslar) 📚
+10. [**Referanslar**](#referanslar) 📚
 
-12. [**Bağımlılıklar (Dependencies)**](#bağımlılıklar-dependencies) 🛠️
+11. [**Bağımlılıklar (Dependencies)**](#bağımlılıklar-dependencies) 🛠️
     - [Projenin Çalışması İçin Gerekli Olan Python Paketleri](#projenin-çalışması-için-gerekli-olan-python-paketleri)
     - [Ortam Kurulumu ve Kullanım Talimatları](#ortam-kurulumu-ve-kullanım-talimatları)
 
@@ -56,7 +51,7 @@
     <h1>Dökümantasyon</h1>
 </div>
 
-## Proje ve Ekip Tanıtımı
+## 1. Proje ve Ekip Tanıtımı
 
 ### Ekip Tanıtımı
 Proje ekibi, Fırat Üniversitesi Yazılım Mühendisliği ve Bilgisayar Mühendisliği öğrencilerinden oluşmaktadır. Ekibimizi daha yakından tanımak için ekip tanıtım dosyamıza şuradan ulaşabilirsiniz. Ekip üyelerimiz:
@@ -94,7 +89,7 @@ Bu projede, doğal dil işleme alanındaki ileri düzey teknikler ve yöntemler 
 
 Bu teknikler ve yöntemler, projenin başarılı bir şekilde gerçekleştirilmesi ve hedeflerine ulaşması için önemli katkılar sağlamıştır. Projenin çıktıları, Türkçe dilinde doğal dil işleme alanındaki araştırmalara ve uygulamalara değerli bir katkı sunmaktadır.
 
-## Veri Kümesi
+## 2. Veri Kümesi
 
 ### Veri Kaynağı ve Toplama Süreci
 Modelimizi geliştirirken iki farklı veri kümesi kullandık. İlk veri kümesi ABSA (Aspect-Based Sentiment Analysis) veri kümesi olup müşteri yorumlarındaki görüşlerin ve hedef varlıkların saptanması için tasarlanmıştır. İkinci veri kümesi ise NER (Named Entity Recognition) veri kümesidir. Bu veri kümesi, metindeki firmaların tanınması ve sınıflandırılması için kullanılıyor. Veri setlerini oluştururken öncelikle modelimiz için gerekli doğru formatı belirledik. Yapay zeka araçlarını kullanarak belirlediğimiz formatta veri setini oluşturarak modelin gerçek performansını öğrenmeyi amaçladık.
@@ -180,43 +175,46 @@ O: Organizasyon adı olmayan diğer kelimeleri belirtir.
 | oldukca   | O                |
 | ortalama  | O                |
 
+
 Bu veri kümesinde "turk telekom" bir organizasyon adı olarak başlangıç ve devam etiketleriyle (B-organization, I-organization) belirtilmiş, diğer kelimeler ise organizasyon adı olmayan (O) kelimeler olarak etiketlenmiştir.
 
-## Keşifsel Veri Analizi (EDA)
+
+## 3. Keşifsel Veri Analizi (EDA)
 
 ### Verinin Genel Özellikleri ve İlk İncelemeler
 Veri setinin genel özellikleri incelenmiş ve metinlerde geçen firma isimleri ile bu isimlere atfedilen duygu durumları analiz edilmiştir. İlk incelemeler, veri setindeki firma isimlerinin ve duygu durumlarının dağılımını ortaya koymuştur.
 
 ### Veri Görselleştirme ve Öne Çıkan Bulgular
 Veri seti, çeşitli görselleştirme teknikleri kullanılarak analiz edilmiştir. Bu analizler, firma isimlerinin ve duygu durumlarının dağılımını görselleştirerek, öne çıkan bulguları ortaya koymuştur.
-
+<br><br><br><br>
 ![NER Modeli Sınıf Dağılım Grafiği](https://github.com/STNM-NLPhoenix/Teknofest2024TDDI/blob/main/ner_sinif_dagilimi.png)
-
+<br><br><br>
 Bu grafikten elde ettiğimiz veriler sayesinde hazırladığımız veri setinde O etiketi organizasyon etiketlerine oranla çok daha fazla olduğunu görebiliyoruz. Bu sebepten ötürü veri setindeki organizasyon etiketlerinin toplamını O etiketine yaklaştırmayı hedefleyerek bu yönde bir çalışma yapılmıştır. Bu çalışmaların sonucu aşağıdaki grafikte görülmektedir.
-
+<br><br><br>
 ![NER Modeli Sınıf Dağılım Grafiği](https://github.com/STNM-NLPhoenix/Teknofest2024TDDI/blob/main/ner_sinif_dagilim_duzenlenmis.png)
-
+<br><br><br>
 Aşağıdaki ortalama kelime uzunluğu grafiği ile NER veri setindeki ortalama kelime uzunluklarını görmeyi hedefledik.
-
+<br><br><br>
 ![NER Modeli Kelime Uzunluğu Grafiği](https://github.com/STNM-NLPhoenix/Teknofest2024TDDI/blob/main/ner_kelime_uzunluklari.png)
-
+<br><br><br>
 Veri setinde en sık kullanılan kelimeleri tespit ederek bu kelimeler için Türkçe eş anlamlı sözcükler için eş anlam sözlüğü oluşturduk.Veri setindeki kelimelere ek olarak eş anlamlıları ile değiştirip veri setine yeniden ekledik.Bu sayede veri setimizi büyük oranda büyütmeyi amaçladık.
-
+<br><br><br>
 ![En Sık Kullanılan Kelimeler](https://github.com/STNM-NLPhoenix/Teknofest2024TDDI/blob/main/ner_en_cok_kelime.png)
-
+<br><br><br>
 ![1-nGram](https://github.com/STNM-NLPhoenix/Teknofest2024TDDI/blob/main/1-ngram.png)
-
+<br><br><br>
 ### Firma İsimleri ve İlişkili Duygusal Analizler
 Firma isimlerine atfedilen duygusal tonlar analiz edilerek, firma isimleri ve bu isimlere atfedilen duygusal durumlar arasındaki ilişkiler incelenmiştir. Bu analizler, firma algısını ve müşteri geri bildirimlerini anlamada önemli bulgular sunmaktadır.
-
+<br><br>
 ABSA veri setinin duygu dağılımının bir pasta grafiğini çıkardık.Bu sayede veri setinde duygu dağılımında oluşan eşitsizliği görme fırsatı yakaladık.
+<br><br><br>
 ![Pasta](https://github.com/STNM-NLPhoenix/Teknofest2024TDDI/blob/main/duygu_dagilimi_pasta.png)
-
+<br><br>
 ABSA veri setinde en çok bulunan şirket isimlerini analiz ederek amacımıza uygun olup olmadığını kontrol edebildik.
+<br><br><br>
 ![En Sık 10 Şirket](https://github.com/STNM-NLPhoenix/Teknofest2024TDDI/blob/main/en_cok_10_sirket.png)
-
-
-## Firma İsimlerinin Tespiti
+<br>
+## 4. Firma İsimlerinin Tespiti
 
 ### Varlık Adı Tanıma (NER) Modeli ile Firma İsimlerinin Belirlenmesi
 Varlık Adı Tanıma (NER) modeli kullanılarak, metinlerde geçen firma isimleri yüksek doğrulukla tespit edilmiştir. Bu model, BERT gibi önceden eğitilmiş dil modelleri temel alınarak özelleştirilmiş ve Türkçe diline uyarlanmıştır.
@@ -286,7 +284,7 @@ Yapılan analizler sonucunda elde edilen duygu dağılımlarının ve sonuçlar�
 
 
 
-## Veri Ön İşleme Süreci ve Kararlarımız
+## 6. Veri Ön İşleme Süreci ve Kararlarımız
 Geliştirme sürecimizde, çeşitli veri ön işleme adımlarının etkilerini analiz ederek en uygun microservice’i oluşturduk. Bu sürecin sonunda, metin işleme ve model performansını artıran en etkili yöntemleri belirledik.
 
 1. Noktalama İşaretlerinin Kaldırılması
@@ -310,19 +308,8 @@ Karar: Kısaltmalar ve özel isimler için bu dönüşümü uygulamaktan vazgeç
 
 Sonuç
 Yukarıdaki ön işleme adımları ve gözlemler doğrultusunda, modelimiz için en uygun veri ön işleme stratejilerini belirledik ve bu adımları bir microservice olarak hayata geçirdik. Bu microservice, metinlerin doğru bir şekilde işlenmesini sağlayarak, hem NER hem de Duygu Analizi görevlerinde yüksek performans sergilemektedir.
-
-## Model Geliştirme
-
-### Kullanılan NER ve ABSA Modellerinin Detayları
-Projede kullanılan NER ve ABSA modellerinin teknik detayları ve bu modellerin nasıl eğitildiği açıklanmıştır. Modellerin performansı ve elde edilen sonuçlar değerlendirilmiştir.
-
-### Model Eğitim Süreci ve Hiperparametre Ayarları
-Model eğitim süreci ve kullanılan hiperparametre ayarları detaylandırılmıştır. Eğitim sürecinde karşılaşılan zorluklar ve bu zorlukların nasıl aşıldığına dair bilgiler verilmiştir.
-
-### Modelin Performansının Değerlendirilmesi
-Modelin performansı, çeşitli metrikler kullanılarak değerlendirilmiş ve sonuçlar sunulmuştur. Modelin doğruluğu, hassasiyeti ve güvenilirliği analiz edilmiştir.
-
-## 8. Sonuçlar ve Analiz 📈
+<br><br><br><br>
+## 7. Sonuçlar ve Analiz 📈
 
 ### NER Modeli Performans Metrikleri
 
@@ -357,7 +344,7 @@ Metinlerde firma isimlerine atfedilen duyguların belirlenmesi için dbmdz/bert-
 ### Model Eğitim Süreci ve Hiperparametre Ayarları
 
 *NER Modeli Eğitimi*
-
+<br><br>
 | Model Adı                                   | learning_rate | batch_size | epochs | val_loss | f1_score |
 |---------------------------------------------|---------------|------------|--------|----------|----------|
 | nlphoenix-bert-ner-turkish-cased            | 4e-5          | 32         | 2      | 0.2725   | 0.9543   |
@@ -368,7 +355,7 @@ savasy/bert-base-turkish-ner-cased modeli, yaklaşık 130,000 firma isimleri ile
 
 
 *ABSA Modeli Eğitimi*
-
+<br><br>
 | Model Adı                                   | learning_rate | batch_size | epochs | val_loss | f1_score |
 |---------------------------------------------|---------------|------------|--------|----------|----------|
 | nlphoenix-bert-absa-turkish-cased           | 2e-5          | 64         | 2      | 0.2689   | 0.9535   |
@@ -390,13 +377,14 @@ savasy/bert-base-turkish-ner-cased modeli, test verileri üzerinde %95'in üzeri
 
 Projemizin analiz ve sonuçları, kullanılan NER ve ABSA modellerinin üstün performansını ve metin analizindeki etkinliğini göstermektedir. Bu modeller sayesinde, Türkçe metinlerde firma isimlerinin doğru bir şekilde tanınması ve bu isimlere atfedilen duyguların yüksek doğrulukla belirlenmesi sağlanmıştır. Kullanılan NER ve ABSA modelleri, metin analizi süreçlerinde yüksek doğruluk ve etkinlik sunarak, proje hedeflerimize ulaşmamızı sağlamıştır.
 
-## Arayüz ve API Entegrasyonu
-
+## 8. Arayüz ve API Entegrasyonu
+![API](https://github.com/STNM-NLPhoenix/Teknofest2024TDDI/blob/main/turkcell.jpg)
+<br><br><br>
 Projede, kullanıcı dostu ve etkili bir arayüz oluşturmak için FastAPI kullanıldı. FastAPI, projede API'lerin hızlı ve verimli bir şekilde sunulmasını sağladı. Modern Python web framework'leri arasında yer alan FastAPI, yüksek performansı ve kolay entegrasyon imkanı sayesinde öne çıktı. Kullanıcılar, bu API'ler aracılığıyla modellere erişip sonuçları hızlıca elde edebildi ve API'lerin sunduğu esneklik sayesinde farklı cihaz ve platformlardan kolayca veri çekebildi.
 
 Ayrıca, Jinja şablon motoru projede önemli bir rol oynadı. Jinja, dinamik içerikler oluşturmak için güçlü bir araç sundu ve verilerin şablonlara kolayca entegre edilmesini sağladı. Bu sayede, kullanıcıya özelleştirilmiş ve dinamik içerikler sunularak, arayüzün kullanıcı ihtiyaçlarına göre şekillendirilmesi mümkün hale getirildi. Jinja, FastAPI ile mükemmel bir uyum içinde çalışarak projenin esnekliğini ve kullanıcı deneyimini daha da geliştirdi.
 
-## Sonuç ve Gelecek Çalışmalar
+## 9. Sonuç ve Gelecek Çalışmalar
 
 ### Projenin Sonuçları ve Genel Değerlendirme
 Teknofest Türkçe Doğal Dil İşleme Yarışması'nda Entity Bazlı Duygu Analizi kategorisinde yürüttüğümüz proje, müşteri geri bildirimlerinin analiz edilerek belirli hizmet yönleri veya ürün özellikleriyle ilgili duyguların sınıflandırılmasını hedeflemektedir. Bu doğrultuda, üç ana model geliştirdik:
@@ -421,7 +409,7 @@ Projeyi gerçekleştirirken, özelleştirilmiş duygu analizi modeli yerine ABSA
 
 *Model Performansı*: Özelleştirilmiş ABSA modelimiz, NER modelinden aldığı varlıklar sayesinde başarılı bir şekilde çalışmaktadır. Bu, diğer araştırmacılara ve uygulayıcılara yol gösterici olabilir.
 
-## Referanslar
+## 10. Referanslar
 
 - [Exploiting BERT for End-to-End Aspect-based Sentiment Analysis](https://arxiv.org/abs/1910.00883)
 - [Aspect-Based Sentiment Analysis using BERT](https://aclanthology.org/W19-6120/)
@@ -430,7 +418,7 @@ Projeyi gerçekleştirirken, özelleştirilmiş duygu analizi modeli yerine ABSA
 - [Aspect Based Twitter Sentiment Analysis on Vaccination and Vaccine Types in COVID-19 Pandemic With Deep Learning](https://ieeexplore.ieee.org/abstract/document/9640526?casa_token=9aSeVTLCdZoAAAAA:c3ZQugvAolVRaGuCghXpusXndgoerFNHxOEMhcprgWmdk8MhTmxIPOt-Oy1O0j-Z-iB3c-ZFkmQ)
 - [The Effect of BERT, ELECTRA and ALBERT Language Models on Sentiment Analysis for Turkish Product Reviews](https://ieeexplore.ieee.org/abstract/document/9559007?casa_token=yi6g1vtJjqMAAAAA:sIOwqyPR0_aCvD9rv44bd8zhwKpIPQg3hyoBtVspstyWKJqxzQU2kch40IgmkrNW0CGIVP8JqMA)
 
-# Bağımlılıklar
+## 11. Bağımlılıklar
 
 ### Sanal Ortamın Oluşturulması
 
