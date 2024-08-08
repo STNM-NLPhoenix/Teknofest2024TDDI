@@ -39,17 +39,18 @@
    - [ABSA Modeli Performans Metrikleri](#absa-modeli-performans-metrikleri)
    - [En Başarılı Modellerin Confusion Matrix ve ROC Eğrisi](#en-başarılı-modellerin-confusion-matrix-ve-roc-eğrisi)
 
-9. [**Sonuç ve Gelecek Çalışmalar**](#sonuç-ve-gelecek-çalışmalar) 🚀
+9. [**Arayüz ve API Entegrasyonu**](#arayuz-ve-apı-entegrasyonu)
+
+10. [**Sonuç ve Gelecek Çalışmalar**](#sonuç-ve-gelecek-çalışmalar) 🚀
    - [Projenin Sonuçları ve Genel Değerlendirme](#projenin-sonuçları-ve-genel-değerlendirme)
    - [Gelecekteki İyileştirme Alanları ve Öneriler](#gelecekteki-iyileştirme-alanları-ve-öneriler)
    - [TDDi'ye Katkısı](#tddi-ye-katkısı)
 
-10. [**Referanslar**](#referanslar) 📚
+11. [**Referanslar**](#referanslar) 📚
 
-11. [**Bağımlılıklar (Dependencies)**](#bağımlılıklar-dependencies) 🛠️
+12. [**Bağımlılıklar (Dependencies)**](#bağımlılıklar-dependencies) 🛠️
     - [Projenin Çalışması İçin Gerekli Olan Python Paketleri](#projenin-çalışması-için-gerekli-olan-python-paketleri)
     - [Ortam Kurulumu ve Kullanım Talimatları](#ortam-kurulumu-ve-kullanım-talimatları)
-
 
 <div align="center">
     <h1>Dökümantasyon</h1>
@@ -395,6 +396,11 @@ dbmdz/bert-base-turkish-cased modeli, duygu analizi görevlerinde %90 doğruluk,
 
 Projemizin analiz ve sonuçları, kullanılan NER ve ABSA modellerinin üstün performansını ve metin analizindeki etkinliğini göstermektedir. Bu modeller sayesinde, Türkçe metinlerde firma isimlerinin doğru bir şekilde tanınması ve bu isimlere atfedilen duyguların yüksek doğrulukla belirlenmesi sağlanmıştır. Kullanılan NER ve ABSA modelleri, metin analizi süreçlerinde yüksek doğruluk ve etkinlik sunarak, proje hedeflerimize ulaşmamızı sağlamıştır.
 
+## Arayüz ve API Entegrasyonu
+
+Projede, kullanıcı dostu ve etkili bir arayüz oluşturmak için FastAPI kullanıldı. FastAPI, projede API'lerin hızlı ve verimli bir şekilde sunulmasını sağladı. Modern Python web framework'leri arasında yer alan FastAPI, yüksek performansı ve kolay entegrasyon imkanı sayesinde öne çıktı. Kullanıcılar, bu API'ler aracılığıyla modellere erişip sonuçları hızlıca elde edebildi ve API'lerin sunduğu esneklik sayesinde farklı cihaz ve platformlardan kolayca veri çekebildi.
+
+Ayrıca, Jinja şablon motoru projede önemli bir rol oynadı. Jinja, dinamik içerikler oluşturmak için güçlü bir araç sundu ve verilerin şablonlara kolayca entegre edilmesini sağladı. Bu sayede, kullanıcıya özelleştirilmiş ve dinamik içerikler sunularak, arayüzün kullanıcı ihtiyaçlarına göre şekillendirilmesi mümkün hale getirildi. Jinja, FastAPI ile mükemmel bir uyum içinde çalışarak projenin esnekliğini ve kullanıcı deneyimini daha da geliştirdi.
 
 ## Sonuç ve Gelecek Çalışmalar
 
