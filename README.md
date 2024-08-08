@@ -196,7 +196,11 @@ Bu grafikten elde ettiğimiz veriler sayesinde hazırladığımız veri setinde 
 
 ![NER Modeli Sınıf Dağılım Grafiği](https://github.com/STNM-NLPhoenix/Teknofest2024TDDI/blob/main/ner_sinif_dagilim_duzenlenmis.png)
 
+Aşağıdaki ortalama kelime uzunluğu grafiği ile NER veri setindeki ortalama kelime uzunluklarını görmeyi hedefledik.
+
 ![NER Modeli Kelime Uzunluğu Grafiği](https://github.com/STNM-NLPhoenix/Teknofest2024TDDI/blob/main/ner_kelime_uzunluklari.png)
+
+Veri setinde en sık kullanılan kelimeleri tespit ederek bu kelimeler için Türkçe eş anlamlı sözcükler için eş anlam sözlüğü oluşturduk.Veri setindeki kelimelere ek olarak eş anlamlıları ile değiştirip veri setine yeniden ekledik.Bu sayede veri setimizi büyük oranda büyütmeyi amaçladık.
 
 ![En Sık Kullanılan Kelimeler](https://github.com/STNM-NLPhoenix/Teknofest2024TDDI/blob/main/ner_en_cok_kelime.png)
 
@@ -204,6 +208,13 @@ Bu grafikten elde ettiğimiz veriler sayesinde hazırladığımız veri setinde 
 
 ### Firma İsimleri ve İlişkili Duygusal Analizler
 Firma isimlerine atfedilen duygusal tonlar analiz edilerek, firma isimleri ve bu isimlere atfedilen duygusal durumlar arasındaki ilişkiler incelenmiştir. Bu analizler, firma algısını ve müşteri geri bildirimlerini anlamada önemli bulgular sunmaktadır.
+
+ABSA veri setinin duygu dağılımının bir pasta grafiğini çıkardık.Bu sayede veri setinde duygu dağılımında oluşan eşitsizliği görme fırsatı yakaladık.
+![Pasta](https://github.com/STNM-NLPhoenix/Teknofest2024TDDI/blob/main/duygu_dagilimi_pasta.png)
+
+ABSA veri setinde en çok bulunan şirket isimlerini analiz ederek amacımıza uygun olup olmadığını kontrol edebildik.
+![En Sık 10 Şirket](https://github.com/STNM-NLPhoenix/Teknofest2024TDDI/blob/main/en_cok_10_sirket.png)
+
 
 ## Firma İsimlerinin Tespiti
 
