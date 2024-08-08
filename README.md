@@ -125,19 +125,23 @@ Bu örnekte, "Vodafone" varlığı pozitif, "Turkcell" varlığı ise nötr olar
 ### ABSA Veri Seti Formatı:
 
 ```
-       {
-                "text": "Vodafone'un verdiği tanıtım faaliyetleri hayli avantajlı, lakin Turkcell'in servisleri hayli standart.",
-                "entities": [
-                    {
-                        "entity": "Vodafone",
-                        "sentiment": "positive"
-                    },
-                    {
-                        "entity": "Turkcell",
-                        "sentiment": "neutral"
-                    }
-                ]
+   {
+        "text":"Turkcell'in ağ sürati çoğunlukla hoşnutluk sağlayıcı değil, Vodafone'un alıcı servisleri eğer pek çoğu vakit tesirsiz ile Türk Telekom'un data projeleri eğer ortalama.",
+        "entities":[
+            {
+                "entity":"Turkcell",
+                "sentiment":"negative"
+            },
+            {
+                "entity":"Vodafone",
+                "sentiment":"neutral"
+            },
+            {
+                "entity":"Türk Telekom",
+                "sentiment":"negative"
             }
+        ]
+    }
 ```
 ```
 text: Analiz edilen yorumun tam metni.
