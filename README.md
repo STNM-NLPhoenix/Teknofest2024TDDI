@@ -189,6 +189,14 @@ Veri setinin genel özellikleri incelenmiş ve metinlerde geçen firma isimleri 
 ### Veri Görselleştirme ve Öne Çıkan Bulgular
 Veri seti, çeşitli görselleştirme teknikleri kullanılarak analiz edilmiştir. Bu analizler, firma isimlerinin ve duygu durumlarının dağılımını görselleştirerek, öne çıkan bulguları ortaya koymuştur.
 
+![NER Modeli Sınıf Dağılım Grafiği](https://github.com/STNM-NLPhoenix/Teknofest2024TDDI/blob/main/ner_sinif_dagilimi.png)
+
+Bu grafikten elde ettiğimiz veriler sayesinde hazırladığımız veri setinde O etiketi organizasyon etiketlerine oranla çok daha fazla olduğunu görebiliyoruz. Bu sebepten ötürü veri setindeki organizasyon etiketlerinin toplamını O etiketine yaklaştırmayı hedefleyerek bu yönde bir çalışma yapılmıştır. Bu çalışmaların sonucu aşağıdaki grafikte görülmektedir.
+
+![NER Modeli Sınıf Dağılım Grafiği](https://github.com/STNM-NLPhoenix/Teknofest2024TDDI/blob/main/ner_sinif_dagilim_duzenlenmis.png)
+
+![NER Modeli Kelime Uzunluğu Grafiği](https://github.com/STNM-NLPhoenix/Teknofest2024TDDI/blob/main/ner_kelime_uzunluklari.png)
+
 ### Firma İsimleri ve İlişkili Duygusal Analizler
 Firma isimlerine atfedilen duygusal tonlar analiz edilerek, firma isimleri ve bu isimlere atfedilen duygusal durumlar arasındaki ilişkiler incelenmiştir. Bu analizler, firma algısını ve müşteri geri bildirimlerini anlamada önemli bulgular sunmaktadır.
 
