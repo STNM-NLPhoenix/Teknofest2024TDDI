@@ -144,21 +144,21 @@ I-organization: Organizasyon isminin devamını belirtir.
 
 O: Organizasyon adı olmayan diğer kelimeleri belirtir.
 ```
-```
-   words,label
-turk,B-organization
-telekom,I-organization
-müşteri,O
-hizmetleri,O
-kötü,O
-olsa,O
-da,O
-türknet,B-organization
-müşteri,O
-hizmetleri,O
-oldukça,O
-ortalama.,O
-```
+| words     | label            |
+|-----------|------------------|
+| turk      | B-organization   |
+| telekom   | I-organization   |
+| musterileri| O                |
+| hizmetleri| O                |
+| kotu      | O                |
+| olsa      | O                |
+| da        | O                |
+| turknet   | B-organization   |
+| musterileri| O                |
+| hizmetleri| O                |
+| oldukca   | O                |
+| ortalama  | O                |
+
 Bu veri kümesinde "turk telekom" bir organizasyon adı olarak başlangıç ve devam etiketleriyle (B-organization, I-organization) belirtilmiş, diğer kelimeler ise organizasyon adı olmayan (O) kelimeler olarak etiketlenmiştir.
 
 ## Keşifsel Veri Analizi (EDA)
