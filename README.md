@@ -123,6 +123,22 @@ Bu veri kümesi, müşteri yorumlarındaki görüşlerin (sentiment) ve hedef va
 Bu örnekte, "Vodafone" varlığı pozitif, "Turkcell" varlığı ise nötr olarak etiketlenmiştir. 
 
 ### ABSA Veri Seti Formatı:
+
+```
+       {
+                "text": "Vodafone'un verdiği tanıtım faaliyetleri hayli avantajlı, lakin Turkcell'in servisleri hayli standart.",
+                "entities": [
+                    {
+                        "entity": "Vodafone",
+                        "sentiment": "positive"
+                    },
+                    {
+                        "entity": "Turkcell",
+                        "sentiment": "neutral"
+                    }
+                ]
+            }
+```
 ```
 text: Analiz edilen yorumun tam metni.
 entities: Yorumdaki şirketler ve bu şirketlerle ilişkili duyguların belirtildiği bir liste.
