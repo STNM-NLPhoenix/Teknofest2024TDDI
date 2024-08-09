@@ -255,10 +255,10 @@ Modelin tespit ettiği firma isimlerinin doğruluğu ve hassasiyeti değerlendir
 
 ## 5. Duygu Analizi
 
-### 5.1 Duygu Analizi Yöntemleri ve Kullanılan Model
+### Duygu Analizi Yöntemleri ve Kullanılan Model
 Projemizin duygu analizi kısmında, metinlerdeki ince duygusal nüansları yakalamak ve firma isimlerine atfedilen duyguları yüksek doğrulukla belirlemek amacıyla gelişmiş Aspect-Based Sentiment Analysis (ABSA) yöntemleri kullanılmıştır. Bu görevde, Transformer tabanlı modellerin gücünden yararlanılmış ve kapsamlı bir ön eğitim sürecinden geçirilmiş özel bir BERTürk modeli kullanılmıştır. BERTürk, çok katmanlı dikkat mekanizmaları sayesinde, cümlelerin bağlamını derinlemesine anlayarak, metin içindeki belirli varlıkların etrafındaki duygusal ifadeleri ayırt etme yeteneğine sahiptir.
 
-### 5.2 Metin İçerisinde Firma İsimlerine Atfedilen Duyguların Tespiti
+### Metin İçerisinde Firma İsimlerine Atfedilen Duyguların Tespiti
 Metinler içerisinde firma isimlerine atfedilen duyguların tespiti, ABSA modelimiz aracılığıyla gerçekleştirilmiştir. Model, cümleler içinde belirtilen her bir firma ismi için ilgili duygu durumunu (pozitif, negatif, nötr) belirler. Bu sayede, firmalarla ilgili müşteri yorumları ve geri bildirimleri detaylı bir şekilde analiz edilebilir.
 
 ```
@@ -281,7 +281,7 @@ Metinler içerisinde firma isimlerine atfedilen duyguların tespiti, ABSA modeli
 ```
 Yukarıdaki örnekte, ABSA modelimiz "Vodafone" için pozitif, "Turkcell" için nötr duygu durumu tespit etmiştir.
 
-### 5.3 Duygu Dağılımının ve Sonuçların Görselleştirilmesi
+### Duygu Dağılımının ve Sonuçların Görselleştirilmesi
 Yapılan analizler sonucunda elde edilen duygu dağılımlarının ve sonuçların görselleştirilmesi, firmaların genel duygu profillerini ve müşteri algısını daha iyi anlamamıza yardımcı olmaktadır. Aşağıda, farklı grafik türleri kullanarak elde edilen görselleştirmeler açıklanmıştır:
 
 *Sentiment Dağılım Grafiği:* Vodafone, Turkcell ve Samsung firmalarının duygu dağılımlarını inceledik. Sentiment dağılım grafiği, her bir firmanın pozitif, negatif ve nötr duygu oranlarını açıkça gösterir.
