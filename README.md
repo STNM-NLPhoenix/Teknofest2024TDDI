@@ -10,6 +10,7 @@
 2. [**Veri Kümesi**](#2-veri-kümesi) 📊
    - [Veri Kaynağı ve Toplama Süreci](#veri-kaynağı-ve-toplama-süreci)
    - [Veri Setinin Genel Yapısı](#veri-setinin-genel-yapısı)
+   - [ABSA (Aspect-Based Sentiment Analysis) Veri Kümesi](#absa-aspect-based-sentiment-analysis)
 
 3. [**Keşifsel Veri Analizi (EDA)**](#3-keşifsel-veri-analizi-eda) 🔍
    - [Verinin Genel Özellikleri ve İlk İncelemeler](#verinin-genel-özellikleri-ve-ilk-incelemeler)
@@ -99,8 +100,6 @@ Bu teknikler ve yöntemler, projenin başarılı bir şekilde gerçekleştirilme
 ### Veri Kaynağı ve Toplama Süreci
 Modelimizi geliştirirken iki farklı veri kümesi kullandık. İlk veri kümesi ABSA (Aspect-Based Sentiment Analysis) veri kümesi olup müşteri yorumlarındaki görüşlerin ve hedef varlıkların saptanması için tasarlanmıştır. İkinci veri kümesi ise NER (Named Entity Recognition) veri kümesidir. Bu veri kümesi, metindeki firmaların tanınması ve sınıflandırılması için kullanılıyor. Veri setlerini oluştururken öncelikle modelimiz için gerekli doğru formatı belirledik. Yapay zeka araçlarını kullanarak belirlediğimiz formatta veri setini oluşturarak modelin gerçek performansını öğrenmeyi amaçladık.
 
-### Veri Setinin Genel Yapısı
-
 ### ABSA (Aspect-Based Sentiment Analysis) Veri Kümesi
 Bu veri kümesi, müşteri yorumlarındaki görüşlerin (sentiment) ve hedef varlıkların (entities) belirlenmesi amacıyla kullanılır. Her bir örnek, bir metin parçası ve bu metindeki varlıklar ile bu varlıkların duygusal yönelimlerini (pozitif, negatif, nötr) içerir. 
 Örneğin, "Vodafone'un verdiği tanıtım faaliyetleri hayli avantajlı, lakin Turkcell'in servisleri hayli standart." cümlesinde "Vodafone" varlığı pozitif, "Turkcell" varlığı ise nötr olarak etiketlenmiştir. Bu veri kümesi, müşteri görüşlerinin analizi ve işletmelerin hizmetlerinin daha iyi anlaşılması için değerlidir.
@@ -123,7 +122,7 @@ Bu veri kümesi, müşteri yorumlarındaki görüşlerin (sentiment) ve hedef va
             
 Bu örnekte, "Vodafone" varlığı pozitif, "Turkcell" varlığı ise nötr olarak etiketlenmiştir. 
 
-### ABSA Veri Seti Formatı:
+### ABSA Veri Seti Formatı
 
 ```
    {
@@ -155,7 +154,7 @@ sentiment: Şirketle ilişkili duygu (olumlu, olumsuz, nötr).
 ### NER (Named Entity Recognition) Veri Kümesi
 NER veri kümesi, metindeki önemli varlıkların (firmalar) tanınması ve sınıflandırılması için kullanılır. Veri kümesinde her satır, bir kelime ve bu kelimenin entity tipini (B-organization, I-organization, O) içerir. Örneğin, "vodafone", "turk telekom" ve "türknet" gibi kuruluş adları B-organization veya I-organization olarak etiketlenmiştir.
 
-### NER Veri Seti Formatı:
+### NER Veri Seti Formatı
 
 Özelleşmiş isterlere göre dizayn edilmiş organizasyon bazlı conLL formatında NER veri seti, her satırda bir kelime ve o kelimenin etiketini içerecek şekilde düzenlenmiştir. Bir cümle veya metin parçasının sonu boş bir satırla ayrılmıştır. Etiketler, organizasyon isimlerinin başlangıcını ("B-organization") ve devamını ("I-organization") belirtir.
 ```
