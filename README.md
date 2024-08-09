@@ -22,9 +22,9 @@
    - [Elde Edilen Sonuçların Doğruluğu ve Hassasiyeti](#elde-edilen-sonuçların-doğruluğu-ve-hassasiyeti)
 
 5. [**Duygu Analizi**](#5-duygu-analizi) 😊😡
-   - [Duygu Analizi Yöntemleri ve Kullanılan Model](#5-1-duygu-analizi-yöntemleri-ve-kullanılan-model)
-   - [Metin İçerisinde Firma İsimlerine Atfedilen Duyguların Tespiti](#5-2-metin-içerisinde-firma-isimlerine-atfedilen-duyguların-tespiti)
-   - [Duygu Dağılımının ve Sonuçların Görselleştirilmesi](#5-3-duygu-dağılımının-ve-sonuçların-görselleştirilmesi)
+   - [Duygu Analizi Yöntemleri ve Kullanılan Model](#duygu-analizi-yöntemleri-ve-kullanılan-model)
+   - [Metin İçerisinde Firma İsimlerine Atfedilen Duyguların Tespiti](#metin-içerisinde-firma-isimlerine-atfedilen-duyguların-tespiti)
+   - [Duygu Dağılımının ve Sonuçların Görselleştirilmesi](#duygu-dağılımının-ve-sonuçların-görselleştirilmesi)
 
 6. [**Veri Ön İşleme Süreci ve Kararlarımız**](#6-veri-ön-işleme-süreci-ve-kararlarımız) 🧹
 
