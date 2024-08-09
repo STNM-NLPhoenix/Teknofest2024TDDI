@@ -384,9 +384,9 @@ model = AutoModelForSequenceClassification.from_pretrained("STNM-NLPhoenix/bert-
 <br><br>
 | Model Adı                                   | learning_rate | batch_size | epochs | val_loss | f1_score |
 |---------------------------------------------|---------------|------------|--------|----------|----------|
-| nlphoenix-bert-ner-turkish-cased            | 4e-5          | 32         | 2      | 0.2725   | 0.9543   |
-| nlphoenix-bert-ner-turkish-cased            | 3e-5          | 64         | 3      | 0.2694   | 0.9517   |
-| nlphoenix-bert-ner-turkish-cased            | 5e-5          | 16         | 4      | 0.2633   | 0.9392   |
+| STNM-NLPhoenix/bert-base-ner-cased            | 4e-5          | 32         | 2      | 0.2725   | 0.9543   |
+| STNM-NLPhoenix/bert-base-ner-cased            | 3e-5          | 64         | 3      | 0.2694   | 0.9517   |
+| STNM-NLPhoenix/bert-base-ner-cased            | 5e-5          | 16         | 4      | 0.2633   | 0.9392   |
 
 savasy/bert-base-turkish-ner-cased modeli, yaklaşık 130,000 firma isimleri ile ilgili veri seti kullanılarak ince ayar yapılmıştır (finetuning). Eğitim süreci boyunca, modelin öğrenme oranı, batch boyutu, epoch sayısı gibi hiperparametreler özenle ayarlanmıştır. Özellikle, 3e-5 öğrenme oranı, 32 batch boyutu ve 5 epoch, modelin optimum performansı yakalamasında etkili olmuştur. Model, geniş ve çeşitli veri seti sayesinde, farklı sektörlerden gelen firma isimlerini doğru bir şekilde tanımak üzere eğitilmiştir.
 
@@ -395,9 +395,9 @@ savasy/bert-base-turkish-ner-cased modeli, yaklaşık 130,000 firma isimleri ile
 <br><br>
 | Model Adı                                   | learning_rate | batch_size | epochs | val_loss | f1_score |
 |---------------------------------------------|---------------|------------|--------|----------|----------|
-| nlphoenix-bert-absa-turkish-cased           | 2e-5          | 64         | 2      | 0.2689   | 0.9535   |
-| nlphoenix-bert-absa-turkish-cased           | 4e-5          | 128        | 3      | 0.2641   | 0.9521   |
-| nlphoenix-bert-absa-turkish-cased           | 3e-5          | 16         | 4      | 0.2738   | 0.9358   |
+| STNM-NLPhoenix/bert-base-absa           | 2e-5          | 64         | 2      | 0.2689   | 0.9535   |
+| STNM-NLPhoenix/bert-base-absa           | 4e-5          | 128        | 3      | 0.2641   | 0.9521   |
+| STNM-NLPhoenix/bert-base-absa           | 3e-5          | 16         | 4      | 0.2738   | 0.9358   |
 
 dbmdz/bert-base-turkish-cased modeli, yaklaşık 120,000 veri ile eğitilmiştir. Bu süreçte, modelin duygusal bağlamları anlaması için çeşitli duygusal ifadeler içeren geniş bir veri seti kullanılmıştır. Eğitim sırasında, öğrenme oranı 2e-5, batch boyutu 16 ve 4 epoch kullanılmıştır. Hiperparametrelerin bu şekilde ayarlanması, modelin hem eğitim sürecinde hem de genel performansında yüksek verimlilik sağlamıştır.
 
