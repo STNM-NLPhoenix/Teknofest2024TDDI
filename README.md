@@ -1,4 +1,4 @@
-![NLPhoenix Logo](https://github.com/STNM-NLPhoenix/Teknofest2024TDDI/edit/main/README.md)
+![NLPhoenix Logo](https://github.com/STNM-NLPhoenix/Teknofest2024TDDI/blob/main/img/NLPhoenix.png)
 
 ## 📜 İçerik
 
@@ -189,9 +189,6 @@ Bu veri kümesinde "turk telekom" bir organizasyon adı olarak başlangıç ve d
 ### Verinin Genel Özellikleri ve İlk İncelemeler
 
 Veri setinin genel özellikleri incelenmiş ve metinlerde geçen firma isimleri ile bu isimlere atfedilen duygu durumları analiz edilmiştir. İlk incelemeler, veri setindeki firma isimlerinin ve duygu durumlarının dağılımını ortaya koymuştur.
-
-### Veri Görselleştirme ve Öne Çıkan Bulgular
-Veri seti, çeşitli görselleştirme teknikleri kullanılarak analiz edilmiştir. Bu analizler, firma isimlerinin ve duygu durumlarının dağılımını görselleştirerek, öne çıkan bulguları ortaya koymuştur.
 <br><br><br><br>
 ![NER Modeli Sınıf Dağılım Grafiği](https://github.com/STNM-NLPhoenix/Teknofest2024TDDI/blob/main/img/NER_SinifDagilimiEski.png)
 <br><br><br>
@@ -199,6 +196,10 @@ Bu grafikten elde ettiğimiz bulgular sayesinde hazırladığımız veri setinde
 <br><br><br>
 ![NER Modeli Sınıf Dağılım Grafiği](https://github.com/STNM-NLPhoenix/Teknofest2024TDDI/blob/main/img/NER_SinifDagilimiDuzenlendi.png)
 <br><br><br>
+
+### Veri Görselleştirme ve Öne Çıkan Bulgular
+Veri seti, çeşitli görselleştirme teknikleri kullanılarak analiz edilmiştir. Bu analizler, firma isimlerinin ve duygu durumlarının dağılımını görselleştirerek, öne çıkan bulguları ortaya koymuştur.
+
 Aşağıdaki grafik, bir NER (Adlandırılmış Varlık Tanıma) veri setindeki kelime uzunluklarının dağılımını göstermektedir. Grafik, veri setindeki ortalama kelime uzunluklarını daha iyi anlayabilmek için tasarlanmıştır. Yatay eksende ortalama kelime uzunlukları, dikey eksende ise bu uzunlukların frekansları yer almaktadır. Görselde, kelime uzunluklarının büyük bir kısmının 4 ile 8 arasında yoğunlaştığı, 15'ten uzun kelimelerin ise oldukça nadir olduğu görülmektedir. Bu tür bir analiz, NER modellerinin kelime uzunluklarına göre performansını değerlendirmek veya veri setinin genel dil yapısını anlamak için kullanılabilir. Ek olarak, grafik üzerinde KDE (Kernel Yoğunluk Tahmini) çizgisi de bulunmaktadır; bu çizgi, kelime uzunluklarının yoğunluk dağılımını pürüzsüz bir şekilde göstermektedir. Özellikle, 5-7 karakter uzunluğundaki kelimelerin en yüksek frekansa sahip olduğu dikkat çekmektedir. Bu tür görselleştirmeler, dil işleme görevlerinde veri setinin yapısına dair kritik bilgiler sunar.
 <br><br><br>
 ![NER Modeli Kelime Uzunluğu Grafiği](https://github.com/STNM-NLPhoenix/Teknofest2024TDDI/blob/main/img/Ner_KelimeUzunlugu.png)
@@ -281,33 +282,6 @@ Yukarıdaki örnekte, ABSA modelimiz "Vodafone" için pozitif, "Turkcell" için 
 
 ### Duygu Dağılımının ve Sonuçların Görselleştirilmesi
 Yapılan analizler sonucunda elde edilen duygu dağılımlarının ve sonuçların görselleştirilmesi, firmaların genel duygu profillerini ve müşteri algısını daha iyi anlamamıza yardımcı olmaktadır. Aşağıda, farklı grafik türleri kullanarak elde edilen görselleştirmeler açıklanmıştır:
-
-*Sentiment Dağılım Grafiği:* Vodafone, Turkcell ve Samsung firmalarının duygu dağılımlarını inceledik. Sentiment dağılım grafiği, her bir firmanın pozitif, negatif ve nötr duygu oranlarını açıkça gösterir.
-
-![ABSA_duyguDagilimi](https://github.com/STNM-NLPhoenix/Teknofest2024TDDI/blob/main/img/ABSA_DuyguDagilimi.png)
-
-![ABSA_duyguDagilimi](https://github.com/STNM-NLPhoenix/Teknofest2024TDDI/blob/main/img/ABSA_DuyguDagilimiPasta.png)
-
-
-*Entity-Sentiment İlişki Grafiği:* Seçtiğimiz üç firmanın aldığı farklı duygu türlerinin bir arada gösterildiği yığılmış bar grafiğidir. Bu grafik, her firmanın genel duygu profiline dair detaylı bir görsel sunar.
-
-![ABSA_Aldigifarklıduygutürleri](https://github.com/STNM-NLPhoenix/Teknofest2024TDDI/blob/main/img/ABSA_SeciliSirketDuyguOranlar%C4%B1.png)
-
-
-*Heatmap:* Oluşturduğumuz heatmap, seçtiğimiz üç firmanın (Samsung, Turkcell, Vodafone) duygu analizi sonuçlarını görsel olarak sunar. Bu grafik, firmalar arasındaki farklılıkları veya benzerlikleri belirlememize yardımcı olur.
-
-![ABSA_FİRMAVEDUYGUTÜRiLİŞKİ](https://github.com/STNM-NLPhoenix/Teknofest2024TDDI/blob/main/img/ABSA_HeadMap.png)
-
-
-*Text Length (Metin Uzunluğu):* Metinlerin uzunluğu ile duygu türü arasında bir ilişki olup olmadığını inceledik. Örneğin, daha uzun metinlerde duygu tonunun daha yoğun olup olmadığını araştırdık.
-
-![ABSAmetinuzunlugu_turkcel](https://github.com/STNM-NLPhoenix/Teknofest2024TDDI/blob/main/img/ABSA_MetinUzunlugu.jpg)
-
-
-*Entity-Sentiment Pairing:* Belirli bir firmanın hangi duygu türüyle daha sık ilişkilendirildiğini inceledik. Bu analiz, firmanın müşteri geri bildirimlerindeki duygusal eğilimlerini ortaya koyarak genel algısını ve duygusal profilini detaylandırır.
-
-![ABSA_firmaduygutürleri](https://github.com/STNM-NLPhoenix/Teknofest2024TDDI/blob/main/img/ABSA_firmaduygut%C3%BCrleri.png)
-
 
 
 ## 6. Veri Ön İşleme Süreci ve Kararlarımız
