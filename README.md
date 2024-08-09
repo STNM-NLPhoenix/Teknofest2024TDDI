@@ -50,8 +50,6 @@
 10. [**Referanslar**](#10-referanslar) 📚
 
 11. [**Bağımlılıklar**](#11-bağımlılıklar) 🛠️
-    - [Projenin Çalışması İçin Gerekli Olan Python Paketleri](#projenin-çalışması-için-gerekli-olan-python-paketleri)
-    - [Ortam Kurulumu ve Kullanım Talimatları](#ortam-kurulumu-ve-kullanım-talimatları)
 
 <div align="center">
     <h1>Dökümantasyon</h1>
