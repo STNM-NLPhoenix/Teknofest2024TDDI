@@ -10,7 +10,6 @@
 2. [**Veri Kümesi**](#2-veri-kümesi) 📊
    - [Veri Kaynağı ve Toplama Süreci](#veri-kaynağı-ve-toplama-süreci)
    - [Veri Setinin Genel Yapısı](#veri-setinin-genel-yapısı)
-   - [Veri Setinin İçeriği](#veri-setinin-içeriği)
 
 3. [**Keşifsel Veri Analizi (EDA)**](#3-keşifsel-veri-analizi-eda) 🔍
    - [Verinin Genel Özellikleri ve İlk İncelemeler](#verinin-genel-özellikleri-ve-ilk-incelemeler)
@@ -40,6 +39,7 @@
    - [NER Modeli Performansı](#ner-modeli-performansı)
    - [Analiz ve Sonuçlar](#analiz-ve-sonuçlar)
 
+   
 8. [**Arayüz ve API Entegrasyonu**](#8-arayuz-ve-api-entegrasyonu)
 
 9. [**Sonuç ve Gelecek Çalışmalar**](#9-sonuç-ve-gelecek-çalışmalar) 🚀
@@ -100,6 +100,8 @@ Bu teknikler ve yöntemler, projenin başarılı bir şekilde gerçekleştirilme
 
 ### Veri Kaynağı ve Toplama Süreci
 Modelimizi geliştirirken iki farklı veri kümesi kullandık. İlk veri kümesi ABSA (Aspect-Based Sentiment Analysis) veri kümesi olup müşteri yorumlarındaki görüşlerin ve hedef varlıkların saptanması için tasarlanmıştır. İkinci veri kümesi ise NER (Named Entity Recognition) veri kümesidir. Bu veri kümesi, metindeki firmaların tanınması ve sınıflandırılması için kullanılıyor. Veri setlerini oluştururken öncelikle modelimiz için gerekli doğru formatı belirledik. Yapay zeka araçlarını kullanarak belirlediğimiz formatta veri setini oluşturarak modelin gerçek performansını öğrenmeyi amaçladık.
+
+## Veri Setinin Genel Yapısı
 
 ### ABSA (Aspect-Based Sentiment Analysis) Veri Kümesi
 Bu veri kümesi, müşteri yorumlarındaki görüşlerin (sentiment) ve hedef varlıkların (entities) belirlenmesi amacıyla kullanılır. Her bir örnek, bir metin parçası ve bu metindeki varlıklar ile bu varlıkların duygusal yönelimlerini (pozitif, negatif, nötr) içerir. 
@@ -187,6 +189,7 @@ Bu veri kümesinde "turk telekom" bir organizasyon adı olarak başlangıç ve d
 ## 3. Keşifsel Veri Analizi (EDA)
 
 ### Verinin Genel Özellikleri ve İlk İncelemeler
+
 Veri setinin genel özellikleri incelenmiş ve metinlerde geçen firma isimleri ile bu isimlere atfedilen duygu durumları analiz edilmiştir. İlk incelemeler, veri setindeki firma isimlerinin ve duygu durumlarının dağılımını ortaya koymuştur.
 
 ### Veri Görselleştirme ve Öne Çıkan Bulgular
@@ -212,8 +215,9 @@ Bu sayede, veri setimizi büyük oranda büyüterek, doğal dil işleme modeller
 <br><br><br>
 ![En Sık Kullanılan Kelimeler](img/NER_EnCokGecenler.png)
 <br><br><br>
+
 ### Firma İsimleri ve İlişkili Duygusal Analizler
-<br>
+
 Aşağıdaki grafikte, ABSA (Aspect-Based Sentiment Analysis) veri setindeki firma isimlerine atfedilen duygusal tonların dağılımı, bir pasta grafiği aracılığıyla görselleştirilmiştir. Grafikte, verisetindeki yorumların %43,3'ünün pozitif, %29,5'inin negatif, ve %27,1'inin nötr olduğu görülmektedir. Bu grafik, firma algısını ve müşteri geri bildirimlerini anlamak adına önemli bir araç olarak kullanılabilir.
 
 Firma isimlerine atfedilen bu duygusal tonların analizi, müşteri yorumlarının firma algısı üzerindeki etkisini değerlendirmede kritik bilgiler sunmaktadır. Örneğin, pozitif yorumların yüksek oranı, firmaların genel olarak olumlu bir algıya sahip olduğunu, ancak negatif yorumların da göz ardı edilemeyecek bir oranda olduğunu göstermektedir. Nötr yorumların ise, müşterilerin belirli bir konuda olumlu ya da olumsuz bir yargıya varmadan, daha objektif bir bakış açısı sunduklarını işaret eder.
@@ -237,6 +241,7 @@ Bu grafik, belirli şirketlere yönelik genel kullanıcı duyarlılığını anl
 <br><br><br>
 ![En Sık 10 Şirket](img/EnCokGecenSirket.png)
 <br>
+
 ## 4. Firma İsimlerinin Tespiti
 
 ### Varlık Adı Tanıma (NER) Modeli ile Firma İsimlerinin Belirlenmesi
@@ -308,6 +313,7 @@ Yapılan analizler sonucunda elde edilen duygu dağılımlarının ve sonuçlar�
 
 
 ## 6. Veri Ön İşleme Süreci ve Kararlarımız
+
 Geliştirme sürecimizde, çeşitli veri ön işleme adımlarının etkilerini analiz ederek en uygun microservice’i oluşturduk. Bu sürecin sonunda, metin işleme ve model performansını artıran en etkili yöntemleri belirledik.
 
 1. Noktalama İşaretlerinin Kaldırılması
