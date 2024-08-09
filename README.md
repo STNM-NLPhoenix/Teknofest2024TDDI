@@ -359,10 +359,24 @@ Bu projede, firma isimlerinin doğru ve hassas bir şekilde tanınabilmesi ve bu
 ### NER (Varlık Adı Tanıma) Modeli
 
 Bu projede, savasy/bert-base-turkish-ner-cased modeli kullanılmıştır. Bu model, Türkçe dilinin yapısal özelliklerini dikkate alarak eğitilmiş olup, isim tanıma görevlerinde üstün performans sergilemektedir. Modelin güçlü dil anlayışı ve bağlam duyarlılığı, metinlerdeki firma isimlerini yüksek doğrulukla tanımasına olanak tanır.
+<br>
+#### Kullanımı
+```
+from transformers import pipeline, AutoModelForTokenClassification, AutoTokenizer
+model = AutoModelForTokenClassification.from_pretrained("STNM-NLPhoenix/bert-base-ner-cased")
+tokenizer = AutoTokenizer.from_pretrained("STNM-NLPhoenix/bert-base-ner-cased")
+```
 
 ### ABSA (Aspect-Based Sentiment Analysis) Modeli
 
 Metinlerde firma isimlerine atfedilen duyguların belirlenmesi için dbmdz/bert-base-turkish-cased modeli tercih edilmiştir. Bu model, Türkçe metinlerde duygusal tonları ve bağlamı anlamada yüksek başarı gösterir. Modelin esnek yapısı ve derin öğrenme yetenekleri, firma isimleri etrafındaki duygusal ifadeleri etkili bir şekilde sınıflandırmasını sağlar.
+<br>
+#### Kullanımı
+```
+from transformers import AutoTokenizer, AutoModelForSequenceClassification
+tokenizer = AutoTokenizer.from_pretrained("STNM-NLPhoenix/bert-base-absa")
+model = AutoModelForSequenceClassification.from_pretrained("STNM-NLPhoenix/bert-base-absa")
+```
 
 ### Model Eğitim Süreci ve Hiperparametre Ayarları
 
