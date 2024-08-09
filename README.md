@@ -10,7 +10,7 @@
 2. [**Veri Kümesi**](#2-veri-kümesi) 📊
    - [Veri Kaynağı ve Toplama Süreci](#veri-kaynağı-ve-toplama-süreci)
    - [Veri Setinin Genel Yapısı](#veri-setinin-genel-yapısı)
-   - [ABSA (Aspect-Based Sentiment Analysis) Veri Kümesi](#absa-aspect-based-sentiment-analysis)
+   - [ABSA (Aspect-Based Sentiment Analysis) Veri Kümesi](#absa-aspectbased-sentiment-analysis)
 
 3. [**Keşifsel Veri Analizi (EDA)**](#3-keşifsel-veri-analizi-eda) 🔍
    - [Verinin Genel Özellikleri ve İlk İncelemeler](#verinin-genel-özellikleri-ve-ilk-incelemeler)
