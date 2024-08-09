@@ -313,6 +313,14 @@ Yukarıdaki ön işleme adımları ve gözlemler doğrultusunda, modelimiz için
 <br>
 ## 7. Sonuçlar ve Analiz 📈
 
+Görevimizin başlangıcında, MT-DNN (Multi-Task Deep Neural Networks) ve MTL-DNN (Multi-Task Learning Deep Neural Networks) modellerini farklı veri formatları üzerinde denedik. Ancak, bu modellerin Türkçe diline uygunluğunun ve bağlam yakalama yeteneklerinin düşük olması nedeniyle beklediğimiz performansı elde edemedik.
+
+Bu nedenle, Named Entity Recognition (NER) modeliyle birlikte Türkçe dilinde daha iyi sonuçlar verebilecek NLP tekniklerini araştırmaya başladık. Araştırmalarımız sonucunda, ABSA (Aspect-Based Sentiment Analysis) ve ELSA (Entity-Level Sentiment Analysis) yaklaşımlarına ulaştık. İlk bakışta ELSA, sorunumuza uygun bir çözüm gibi görünse de, büyük veri setleri ve farklı fonksiyonlarla yaptığımız denemeler beklenenin aksine kötü sonuçlar verdi. Bu doğrultuda ABSA modeline yöneldik ve bu modelle çok daha iyi sonuçlar elde ettik. Gerekli optimizasyon metriklerini de bu modele entegre ettikten sonra, sonuçlar istediğimiz seviyeye ulaştı.
+
+Süreç boyunca aktivasyon fonksiyonları olarak GELU, ReLU ve Softmax'ı denedik, ancak olumlu sonuçlar alamadık. Optimizasyon fonksiyonları açısından ise Adam, AdamW ve Adagrad'ı inceledik. Denemelerimiz sonucunda AdamW fonksiyonunun modelimize en büyük katkıyı sağladığını gözlemledik ve bu fonksiyonu kullanmaya karar verdik.
+
+Sonuç olarak, NER modeli için BERTurk ve AdamW kombinasyonunun en iyi sonuçları verdiğini tespit ettik ve mimarisini buna göre ayarladık. Duygu Analizi'nde ise ABSA yaklaşımıyla BERTurk modelini kullanarak en iyi sonuçlara ulaştık. Bu sayede iki modeli birbirine paralel çalışacak şekilde optimize ederek, gereksinimlerimize uygun hale getirdik.
+
 ### NER Modeli Performans Metrikleri
 
 | Metric       | Value  |
