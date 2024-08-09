@@ -367,7 +367,7 @@ model = AutoModelForSequenceClassification.from_pretrained("STNM-NLPhoenix/bert-
 | STNM-NLPhoenix/bert-base-ner-cased            | 3e-5          | 64         | 3      | 0.2694   | 0.9517   |
 | STNM-NLPhoenix/bert-base-ner-cased            | 5e-5          | 16         | 4      | 0.2633   | 0.9392   |
 
-savasy/bert-base-turkish-ner-cased modeli, yaklaşık 130,000 firma isimleri ile ilgili veri seti kullanılarak ince ayar yapılmıştır (finetuning). Eğitim süreci boyunca, modelin öğrenme oranı, batch boyutu, epoch sayısı gibi hiperparametreler özenle ayarlanmıştır. Özellikle, 3e-5 öğrenme oranı, 32 batch boyutu ve 5 epoch, modelin optimum performansı yakalamasında etkili olmuştur. Model, geniş ve çeşitli veri seti sayesinde, farklı sektörlerden gelen firma isimlerini doğru bir şekilde tanımak üzere eğitilmiştir.
+savasy/bert-base-turkish-ner-cased modeli, yaklaşık 130,000 firma isimleri ile ilgili veri seti kullanılarak ince ayar yapılmıştır (finetuning). Eğitim süreci boyunca, modelin öğrenme oranı, batch boyutu, epoch sayısı gibi hiperparametreler özenle ayarlanmıştır. Özellikle, 4e-5 öğrenme oranı, 32 batch boyutu ve 2 epoch, modelin optimum performansı yakalamasında etkili olmuştur. Model, geniş ve çeşitli veri seti sayesinde, farklı sektörlerden gelen firma isimlerini doğru bir şekilde tanımak üzere eğitilmiştir.
 
 
 *ABSA Modeli Eğitimi*
@@ -378,7 +378,7 @@ savasy/bert-base-turkish-ner-cased modeli, yaklaşık 130,000 firma isimleri ile
 | STNM-NLPhoenix/bert-base-absa           | 4e-5          | 128        | 3      | 0.2641   | 0.9521   |
 | STNM-NLPhoenix/bert-base-absa           | 3e-5          | 16         | 4      | 0.2738   | 0.9358   |
 
-dbmdz/bert-base-turkish-cased modeli, yaklaşık 120,000 veri ile eğitilmiştir. Bu süreçte, modelin duygusal bağlamları anlaması için çeşitli duygusal ifadeler içeren geniş bir veri seti kullanılmıştır. Eğitim sırasında, öğrenme oranı 2e-5, batch boyutu 16 ve 4 epoch kullanılmıştır. Hiperparametrelerin bu şekilde ayarlanması, modelin hem eğitim sürecinde hem de genel performansında yüksek verimlilik sağlamıştır.
+dbmdz/bert-base-turkish-cased modeli, yaklaşık 120,000 veri ile eğitilmiştir. Bu süreçte, modelin duygusal bağlamları anlaması için çeşitli duygusal ifadeler içeren geniş bir veri seti kullanılmıştır. Eğitim sırasında, öğrenme oranı 2e-5, batch boyutu 64 ve 2 epoch kullanılmıştır. Hiperparametrelerin bu şekilde ayarlanması, modelin hem eğitim sürecinde hem de genel performansında yüksek verimlilik sağlamıştır.
 
 
 ### Modelin Performansının Değerlendirilmesi
@@ -387,7 +387,7 @@ Eğitim süreçlerinin ardından, modellerin performansı kapsamlı bir şekilde
 
 ### NER Modeli Performansı
 
-savasy/bert-base-turkish-ner-cased modeli, test verileri üzerinde %95'in üzerinde doğruluk ve %93 hassasiyet ile üstün bir performans sergilemiştir. Geri çağırma oranı %92 ve F1 skoru %92.5 olan model, firma isimlerini tanımada yüksek doğruluk sağlamıştır.
+STNM-NLPhoenix/bert-base-ner-cased modeli, test verileri üzerinde %96'nın üzerinde doğruluk ve %95 hassasiyet ile üstün bir performans sergilemiştir. Geri çağırma oranı %95.8 ve F1 skoru %95.4 olan model, firma isimlerini tanımada yüksek doğruluk sağlamıştır.
 
 ### Analiz ve Sonuçlar
 
