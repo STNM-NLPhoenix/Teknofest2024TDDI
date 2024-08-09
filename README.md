@@ -43,7 +43,6 @@
    - [NER Modeli Performansı](#ner-modeli-performansı)
    - [Analiz ve Sonuçlar](#analiz-ve-sonuçlar)
 
-   
 8. [**Arayüz ve API Entegrasyonu**](#8-arayuz-ve-api-entegrasyonu)
 
 9. [**Sonuç ve Gelecek Çalışmalar**](#9-sonuç-ve-gelecek-çalışmalar) 🚀
