@@ -10,7 +10,10 @@
 2. [**Veri Kümesi**](#2-veri-kümesi) 📊
    - [Veri Kaynağı ve Toplama Süreci](#veri-kaynağı-ve-toplama-süreci)
    - [Veri Setinin Genel Yapısı](#veri-setinin-genel-yapısı)
-   - [ABSA (Aspect-Based Sentiment Analysis) Veri Kümesi](#absa-aspectbased-sentiment-analysis)
+   - [ABSA (Aspect-Based Sentiment Analysis) Veri Kümesi](#absa-aspectbased-sentiment-analysis-veri-kümesi)
+   - [ABSA Veri Seti Formatı](#absa-veri-seti-formatı)
+   - [NER (Named Entity Recognition) Veri Kümesi](#ner-named-entity-recognition-veri-kümesi)
+   - [NER Veri Seti Formatı](#ner-veri-seti-formatı)
 
 3. [**Keşifsel Veri Analizi (EDA)**](#3-keşifsel-veri-analizi-eda) 🔍
    - [Verinin Genel Özellikleri ve İlk İncelemeler](#verinin-genel-özellikleri-ve-ilk-incelemeler)
