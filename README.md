@@ -58,7 +58,7 @@
 <div align="center">
     <h1>Dökümantasyon</h1>
 </div>
-<br><br>
+<br>
 
 ## 1. Proje ve Ekip Tanıtımı
 
