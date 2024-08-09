@@ -192,7 +192,9 @@ Veri setinin genel özellikleri incelenmiş ve metinlerde geçen firma isimleri 
 ### Veri Görselleştirme ve Öne Çıkan Bulgular
 Veri seti, çeşitli görselleştirme teknikleri kullanılarak analiz edilmiştir. Bu analizler, firma isimlerinin ve duygu durumlarının dağılımını görselleştirerek, öne çıkan bulguları ortaya koymuştur.
 <br><br><br><br>
-![NER Modeli Sınıf Dağılım Grafiği](https://github.com/STNM-NLPhoenix/Teknofest2024TDDI/blob/main/ner_sinif_dagilimi.png)
+
+![NER Modeli Sınıf Dağılım Grafiği](img/NER_SinifDagilimiDuzenlendi.png)
+
 <br><br><br>
 Bu grafikten elde ettiğimiz bulgular sayesinde hazırladığımız veri setinde O etiketi, organizasyon etiketlerine oranla çok daha fazla olduğunu görebiliyoruz. Bu sebepten ötürü veri setindeki organizasyon etiketlerinin toplamını O etiketine yaklaştırmayı hedefleyerek bu yönde bir çalışma yapılmıştır. Bu çalışmaların sonucu aşağıdaki grafikte görülmektedir.
 <br><br><br>
