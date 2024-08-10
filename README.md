@@ -62,7 +62,7 @@
 ## 1. Proje ve Ekip Tanıtımı
 
 ### Ekip Tanıtımı
-Proje ekibi, Fırat Üniversitesi Yazılım Mühendisliği ve Bilgisayar Mühendisliği öğrencilerinden oluşmaktadır. Ekibimizi daha yakından tanımak için ekip tanıtım dosyamıza şuradan ulaşabilirsiniz. Ekip üyelerimiz:
+Proje ekibi, Fırat Üniversitesi Yazılım Mühendisliği ve Bilgisayar Mühendisliği öğrencilerinden oluşmaktadır. Ekibimizi daha yakından tanımak için ekip tanıtım dosyamıza [şuradan](https://github.com/STNM-NLPhoenix/Teknofest2024TDDI/blob/main/tak%C4%B1m_tan%C4%B1t%C4%B1m.pdf) ulaşabilirsiniz. Ekip üyelerimiz:
 
 - Murat Aydoğan (Danışman)
 - Muhammed Talha Bıçak (Kaptan)
